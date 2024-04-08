@@ -1,7 +1,37 @@
 :root{
+    --text-tiny: 10px;
+    --text-xs: 12px;
+    --text-xs1: 13px;
+    --text-sm: 14px;
+    --text-sm1: 15px;
+    --text-md: 16px;
+    --text-md1: 17px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-mxl: 22px;
+    --text-2xl: 24px;
+    --text-3xl: 25px;
+    --text-mid: 28px;
+    --text-4xl: 30px;
+    --text-mb4xl: 32px;
+    --text-5xl: 34px;
+    --text-mb5xl: 36px;
+    --text-6xl: 40px;
+    --text-7xl: 42px;
+    --text-8xl: 46px;
+    --text-9xl: 50px;
+    --text-mdbig: 60px;
+    --text-wblarge: 65px;
+    --text-lgbig: 70px;
+    --text-big: 80px;
+    --text-wblg: 90px;
+    
     --color-themeorange: #cb7e54;
     --color-themegreen: #77dcb2;
     --color-dark: #0a1415;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-rust: #280e01;
 }
 
 
@@ -13,6 +43,10 @@ ul{
     padding: 0px;
     margin: 0px;
 }
+a{
+    text-decoration: none;
+    color: var(--color-dark);
+}
 
 .container{
     max-width: 90%;
@@ -21,27 +55,66 @@ ul{
 
 body{
     background: var(--color-dark);
+    font-family: "Anybody", sans-serif;
 }
 
 .banner{
     position: relative;
     height: 100vh;
-    background: radial-gradient(circle, rgba(10,20,21,0.9051995798319328) 0%, rgba(120,81,45,1) 100%);
-    background-image: radial-gradient(circle, rgb(10 20 21 / 59%) 0%, rgb(34 60 64) 100%);
-    background-image: radial-gradient(circle, rgb(74 50 23 / 59%) 20%, rgb(45 53 54) 100%);
-
-    /* background: url(../images/bg-landscape.png) no-repeat bottom center; */
+    /* background: radial-gradient(circle, rgba(10,20,21,0.9051995798319328) 0%, rgba(120,81,45,1) 100%);
+    background-image: radial-gradient(circle, rgba(10, 20, 21, .59) 0%, rgba(34 60 64) 100%); */
+    background: radial-gradient(circle, rgba(74, 50, 23, .59) 20%, rgba(18, 23, 24, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 70px;
+    
     
 }
-.banner::before{
-    content: "";
-    height: 1024px;
-    width: 1024px;
-    background: url(../images/bg-landscape.png) no-repeat center;
-    background-size: 35%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 
+.banner__image img{
+    max-height: 400px;
+    max-width: 400px;
+    height: auto;
+    width: auto;
+    display: block;
+}
+h1 span{
+  background: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+h1{
+    font-size: var(--text-lgbig);
+    line-height: 1.1;
+    color: var(--color-white);
+}
+.banner__text {
+    max-width: 46%;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--color-white);
+}
+.banner__text p{
+    font-size: var(--text-xl);
+    margin: 0 0 20px;
+}
+.btn-theme{
+    display: inline-block;
+    padding: 12px 30px;
+    background-image: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen) 50%);
+    background-size: 300% 100%;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+    border-radius: 30px;
+    text-align: center;
+    color: var(--color-black);
+    font-size: var(--text-md);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.btn-theme:hover, .btn-theme:focus {
+    background-position: 26% 0;
+    color: var(--color-rust);
 }
