@@ -11,7 +11,9 @@ window.onscroll=function(){
     }
   };
 
-
+  document.querySelector(".mobile-menu__burger").addEventListener("click", () => {
+    showMenu();
+  });
 
 
 
@@ -58,3 +60,10 @@ const scroller = new LocomotiveScroll({
 
 
 // ScrollTrigger.refresh()
+
+
+const showMenu = () => {
+  document.querySelector(".mobile-menu__burger").classList.toggle("active");
+  document.querySelector(".menu-container").classList.toggle("show-menu");
+  document.querySelector("body").classList.toggle("overflow-hide");
+};
