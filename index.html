@@ -20,6 +20,7 @@
         
         <link href="css/bootstrap.min.css" rel="stylesheet"/>
         <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,11 +28,15 @@
         
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script> -->
 
     </head>
 
     <body>
-        <header class="header-main">
+        <header class="header-main" id="nav_top">
             <div class="container">
                 <div class="menu-container">
                     <a href="#!" class="logo">
@@ -44,28 +49,57 @@
                             <li><a href="#!">Music</a></li>
                             <li><a href="#!">Pricing</a></li>
                         </ul>
-                        
                     </nav>
                     <a href="#!" class="btn-theme">Log in</a>
+                    <div class="mobile-menu__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </header>
-        <section class="banner">
-            <div class="container">
-                <div class="banner__inner">
-                    <div class="banner__text">
-                        <h1><span>Unleash the Symphony </span>&nbsp;of Your Soul</h1>
-                        <p>Discover, Stream, and Groove to Your Favorite Tunes Anytime, Anywhere.</p>
-                        <!-- <p>Dive into a World of Limitless Music by top industry artists</p> -->
-                        <a href="#!" class="btn-theme">Start for free</a>
+        <div data-scroll-container class="loco-container">
+            <section class="banner" data-scroll data-scroll-speed="3" >
+                <div class="container">
+                    <div class="banner__inner">
+                        <div class="banner__text">
+                            <h1><span>Unleash the Symphony </span>&nbsp;of Your Soul</h1>
+                            <p>Discover, Stream, and Groove to Your Favorite Tunes Anytime, Anywhere.</p>
+                            <!-- <p>Dive into a World of Limitless Music by top industry artists</p> -->
+                            <a href="#!" class="btn-theme">Start for free</a>
+                        </div>
+                        <div class="banner__image">
+                            <img src="images/bg-landscape.png" width="800" height="800" alt="user listening music">
+                        </div>
+                        <div class="banner__object">
+                            <img src="images/mike.png" alt="music element" class="banner__object--image" data-value="-2">
+                            <img src="images/music-element.png" alt="music element" class="banner__object--image" data-value="4">
+                            <img src="images/music-flow.png" alt="music element" class="banner__object--image" data-value="6">
+                            <img src="images/music-graphic.png" alt="music element" class="banner__object--image" data-value="-6">
+                        </div>
                     </div>
-                    <div class="banner__image">
-                        <img src="images/bg-landscape.png" width="800" height="800" alt="user listening music">
-                    </div>
-                
+                    
                 </div>
-            </div>
-        </section>
+            </section>
+            <section style="min-height: 800px;">
+
+            </section>
+        </div>
+
+        <script type="text/javascript">
+            document.addEventListener("mousemove", parallax);
+            function parallax(e){
+                document.querySelectorAll(".banner__object--image").forEach(function(move){
+                    var movingValue = move.getAttribute("data-value");
+                    var x = (e.clientX * movingValue) / 150;
+                    var y = (e.clientY * movingValue) / 150;
+
+                    move.style.transform = "translateX("+ x +"px) translateY("+ y +"px)";
+                })
+            }
+        </script>
+        <script src="js/custom.js"></script>
     </body>
 
 </html>
