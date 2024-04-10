@@ -32,6 +32,8 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-rust: #280e01;
+    --color-pastelblue: #2b4753;
+    --color-paleblue:#4a738e;
 }
 
 
@@ -51,6 +53,7 @@ a{
 .container{
     max-width: 90%;
     margin-inline: auto;
+    position: relative;
 }
 
 body{
@@ -90,7 +93,7 @@ body{
     padding-left: 30px;
 }
 .menu-container__list ul li a{
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     color: rgba(255,255,255,.7);
     text-transform: capitalize;
     transition: color 0.3s ease-in;
@@ -194,6 +197,10 @@ body{
     height: 60%;
     position: relative;
     z-index: 1;
+    animation: fadeIn 5s linear;
+    transition: animation 1s;
+    /* animation-delay: 1.5s; */
+    transition-delay: 4s;
 }
 .banner__image img{
     height: 100%;
@@ -206,16 +213,22 @@ h1 span{
   -webkit-text-fill-color: transparent;
 
 }
-h1{
+.banner__text h1{
     font-size: var(--text-lgbig);
     line-height: 1.1;
     color: var(--color-white);
+    animation: fadeIn 2s linear;
 }
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
 .banner__text {
     max-width: 820px;
     text-align: center;
     padding-top: 40px;
-    color: var(--color-white);
+    color: rgba(255,255,255,.82);
     position: relative;
     z-index: 2;
     max-height: 40%;
@@ -223,6 +236,9 @@ h1{
 .banner__text p{
     font-size: var(--text-xl);
     margin: 0 0 20px;
+    animation: fadeIn 1s linear;
+    transition: animation .3s ease-in;
+    transition-delay: .6s;
 }
 .btn-theme{
     display: inline-block;
@@ -239,6 +255,11 @@ h1{
 .btn-theme:hover, .btn-theme:focus {
     background-position: 26% 0;
     color: var(--color-rust);
+}
+.banner__text .btn-theme{
+    animation: fadeIn 2s linear;
+    transition: background .3s ease-in-out, color .3s ease-in-out, animation 1s ease-in;
+   
 }
 .banner__object{
     position: absolute;
@@ -270,6 +291,115 @@ h1{
     bottom: 5%;
     max-width: 120px;
 }
+
+/*-------------------------------search and tab section--------------------------------------*/
+.music-ocean{
+    background: url(../images/dj-sound.jpg) no-repeat top center;
+    background-size: 100%;
+    position: relative;
+    z-index: 0;
+    padding: 80px 0px;
+}
+.music-ocean::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 45, 52, .8);
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    box-shadow: inset 0px -60px 150px #a5805b8f;
+}
+.section-heading{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.section-heading__main{
+    font-size: var(--text-8xl);
+    line-height: 1;
+    color: rgba(255,255,255,.82);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.section-heading__main span{
+    background: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.section-heading__text{
+    font-size: var(--text-lg);
+    color: rgba(255,255,255,.82);
+}
+.multi-search{
+    display: flex;
+    height: 54px;
+    border: 2px solid #759daf;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(139, 188, 209,.1) 0%, rgb(33, 33, 33, .79) 90%);
+    padding: 4px;
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.multi-search__wrap
+{
+    min-width: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgb(102, 167, 150, .5);
+    border-radius: 30px;
+    font-size: var(--text-lg);
+    color: rgba(255,255,255,.82);
+}
+
+.multi-search__input-block{
+    flex-grow: 1;
+    height: 100%;
+    margin-left: -190px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.multi-search__input{
+    width: calc(100% - 190px);
+    height: 100%;
+    font-size: var(--text-lg);
+    line-height: 50px;
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 200px;
+}
+.multi-search__input::placeholder{
+    color: rgba(255,255,255,.7);
+    text-align: center;
+    transition: opacity .2s ease;
+}
+.multi-search__input:focus::placeholder{
+    opacity: 0;
+}
+.multi-search__input-action{
+    padding: 0;
+    background: transparent;
+    width: 30px;
+    flex-shrink: 0;
+    border: none;
+}
+.multi-search__input-action svg path{
+    stroke: rgba(255,255,255,.82);
+}
+
+
+
+
+
+
 
 @media (max-width: 1400px){
     h1{
@@ -306,6 +436,7 @@ h1{
 @media (max-width:991px){
     h1{
         font-size: var(--text-8xl);
+        
     }
     .banner__text{
         max-width: 550px;
@@ -420,6 +551,7 @@ h1{
         max-width: 500px;
     }
 }
+
 
 
 
