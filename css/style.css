@@ -34,6 +34,7 @@
     --color-rust: #280e01;
     --color-pastelblue: #2b4753;
     --color-paleblue:#4a738e;
+    --color-bottle-green: #01211e;
 }
 
 
@@ -58,6 +59,7 @@ a{
 
 body{
     background: var(--color-dark);
+    background: #122620;
     font-family: "Anybody", sans-serif;
 }
 
@@ -72,6 +74,7 @@ body{
     z-index: 5;
     box-shadow: inset 0px 40px 40px rgba(0,0,0,.35);
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.14);
 }
 .logo{
     position: relative;
@@ -182,41 +185,55 @@ body{
 .banner{
     position: relative;
     background: radial-gradient(circle, rgba(74, 50, 23, .59) 20%, rgba(18, 23, 24, 1) 100%);
+    background: radial-gradient(circle, rgba(5, 68, 94, .12) 0%, rgba(18, 23, 24, 1) 44%);
+    background: linear-gradient(to top right, #0f2d38 30%, #10dbc8 228%);
     overflow-x: hidden;
 }
 .banner__inner{
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 70px;
+    padding-top: 70px; */
     position: relative;
 }
 .banner__image{
-    height: 60%;
-    position: relative;
+    /* height: 60%;
+    position: relative; */
     z-index: 1;
     animation: fadeIn 5s linear;
     transition: animation 1s;
     /* animation-delay: 1.5s; */
     transition-delay: 4s;
+    position: absolute;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+    top: 0;
 }
 .banner__image img{
-    height: 100%;
-    width: auto;
+    /* height: 100%;
+    width: auto; */
     display: block;
+    height: 100vh;
+    width: 100%;
 }
 h1 span{
-  background: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen));
+  /* background: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen));
+  background: linear-gradient(to right, var(--color-themegreen), #1b9ab6);
+  background: linear-gradient(to right, #1b9ab6, var(--color-themegreen));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #b7f1cd;
 
 }
 .banner__text h1{
-    font-size: var(--text-lgbig);
+    font-size: var(--text-9xl);
     line-height: 1.1;
     color: var(--color-white);
+    color: #dff8d4;
+    color: #dff8d4;
     animation: fadeIn 2s linear;
 }
 @keyframes fadeIn {
@@ -225,16 +242,17 @@ h1 span{
   }
 
 .banner__text {
-    max-width: 820px;
-    text-align: center;
+    max-width: 40%;
+    /* text-align: center; */
     padding-top: 40px;
     color: rgba(255,255,255,.82);
     position: relative;
     z-index: 2;
-    max-height: 40%;
+    align-self: center;
+    /* max-height: 40%; */
 }
 .banner__text p{
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     margin: 0 0 20px;
     animation: fadeIn 1s linear;
     transition: animation .3s ease-in;
@@ -244,6 +262,7 @@ h1 span{
     display: inline-block;
     padding: 10px 30px;
     background-image: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen) 43%);
+    background-image: linear-gradient(to right, #c1f9a7, var(--color-themegreen) 43%);
     background-size: 300% 100%;
     transition: background .3s ease-in-out, color .3s ease-in-out;
     border-radius: 30px;
@@ -314,20 +333,24 @@ h1 span{
     text-align: center;
     position: relative;
     z-index: 1;
+    
 }
 .section-heading__main{
     font-size: var(--text-8xl);
     line-height: 1;
     color: rgba(255,255,255,.82);
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #60aa7a, #dff8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
 }
-.section-heading__main span{
+/* .section-heading__main span{
     background: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-}
+} */
 .section-heading__text{
     font-size: var(--text-lg);
     color: rgba(255,255,255,.82);
@@ -335,13 +358,13 @@ h1 span{
 .multi-search{
     display: flex;
     height: 54px;
-    border: 2px solid #759daf;
+    border: 2px solid rgb(182, 223, 183, .57);
     border-radius: 30px;
     background: linear-gradient(90deg, rgb(139, 188, 209,.1) 0%, rgb(33, 33, 33, .79) 90%);
     padding: 4px;
     max-width: 1200px;
     margin-inline: auto;
-    margin-top: 60px;
+    margin-top: 80px;
     overflow: hidden;
 }
 .multi-search__wrap
@@ -351,7 +374,7 @@ h1 span{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background: rgba(102, 167, 150, .5);
+    border: 2px solid rgb(119, 220, 178, .53);
     border-radius: 30px;
     font-size: var(--text-lg);
     color: rgba(255,255,255,.82);
@@ -437,7 +460,7 @@ h1 span{
     width: 100%;
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.4);
+    background: rgb(15, 45, 56, .65);
     transition: background .3s ease-in-out;
 }
 
@@ -462,15 +485,15 @@ h1 span{
 .music-type__card-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 190px);
+    grid-template-rows: repeat(3, 150px);
     gap: 25px;
     
 }
 .music-type__tab-section{
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 50px;
-    margin-top: 60px;
+    grid-template-columns: 230px 1fr;
+    gap: 80px;
+    margin-top: 90px;
     max-width: 70%;
     margin-inline: auto;
 }
@@ -479,7 +502,7 @@ h1 span{
 .music-type__tab-menu{
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
     border-bottom: none !important;
 }
 .music-type__tab-menu .nav-item{
@@ -491,9 +514,9 @@ h1 span{
     background: transparent;
     border: 2px solid rgba(221,238,231,.17);
     border-radius: 30px;
-    padding: 11px 10px;
-    min-width: 200px;
-    color: rgba(221,238,231,.81) !important;
+    padding: 13px 10px;
+    min-width: 230px;
+    color: rgb(228, 244, 221, .9) !important;
     text-transform: uppercase;
     position: relative;
     z-index: 1;
@@ -501,15 +524,15 @@ h1 span{
 }
 .music-type__tab-menu .nav-link:hover{
     border-color: rgba(221,238,231,.25);
-    background: #202020;
+    background: #1b2d2c;
 }
 .music-type__tab-menu .nav-item.show, .music-type__tab-menu .nav-link.active{
-    background: #202020;
+    
+    background: #1b2d2c;
     border-color: transparent; 
 }
 
 .music-type__tab-menu .nav-item.show:after, .music-type__tab-menu .nav-item:has(.nav-link.active):after{
-    /* animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite; */
     content: "";
     width: calc(100% + 6px);
     height: calc(100% + 6px);
@@ -519,6 +542,7 @@ h1 span{
     left: -3px;
     right: -3px;
     background: linear-gradient(var(--gradient-angle), rgb(36, 58, 52, 1), rgba(141, 178, 193, .58));
+    background: linear-gradient(var(--gradient-angle), #1b2d2c, rgb(193, 249, 167, .51));
     border-radius: 30px;
     animation: rotation 3s linear 0s infinite normal forwards;
 }
@@ -540,6 +564,121 @@ h1 span{
         initial-value: 0deg;
         inherits: false;
     }
+
+
+
+    /*---------------------------------boost with music---------------------------*/
+    .do-with__music{
+        position: relative;
+        padding: 80px 0px;
+    }
+    .music-boost{
+        display: flex;
+        gap: 50px;
+        overflow: hidden;
+        width: 83%;
+        margin: 70px auto 0;
+    }
+    .music-boost__card{
+        border-radius: 8px;
+        overflow: hidden;
+        /* height: 400px; */
+        min-height: 500px;
+        max-height: 500px;
+        flex: 1 1 50%;
+        transition: flex .5s ease-in-out;
+        position: relative;
+    }
+    .music-boost__card:hover{
+        flex: 3 0 65%;
+        transition: flex .5s ease-in-out;
+    }
+    .music-boost__card a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+    }
+    .music-boost__card a img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .5s ease-in-out;
+    }
+    /* .music-boost__card:hover a img{
+        transform: scale(1.1);
+    } */
+    .music-boost__card a:after{
+        content: "";
+        height: 100%;
+        width: 100%;
+        /* background: linear-gradient(to right, #0f2d3800, #10dbc8a1); */
+        box-shadow: inset 350px 0px 350px rgba(14, 18, 12, .9);
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+    .music-boost__card:last-child a::after{
+        box-shadow: inset -280px 0px 200px rgb(16, 219, 200, .5);
+    }
+    .music-boost__card--content{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        z-index: 1;
+        max-width: 300px;
+    }
+    .music-boost__card:last-child .music-boost__card--content{
+        right: 0;
+        text-align: right;
+    }
+    .music-boost__card--content p{
+        font-size: var(--text-mid);
+        font-weight: 500;
+        color: #dff8d4;
+        line-height: 1.6;
+    }
+    .music-boost__card--content p span{
+        font-size: var(--text-xl);
+        font-weight: 300;
+        display: block;
+        margin-top: 18px;
+    }
+    .do-with__music::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url(../images/listening6.jpg) no-repeat top center;
+        background-size: cover;
+        position: absolute;
+        inset: 0;
+        opacity: 0.14;
+        z-index: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -615,7 +754,7 @@ h1 span{
     }
     .menu-container .btn-theme{
         pointer-events: none;
-        transform: translate(-50%, 120%);
+        transform: translate(-50%, 250%);
         opacity: 0;
         transition: opacity 0.3s ease-in-out, pointer-events 0.3s ease-in;
         position: fixed;
@@ -635,7 +774,7 @@ h1 span{
         justify-content: center;
     }
     .menu-container .menu-container__list ul{
-        transform: translateY(120%);
+        transform: translateY(200%);
         opacity: 0;
         transition: opacity .5s ease-in-out, transform .4s ease-in-out;
     }
