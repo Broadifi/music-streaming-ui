@@ -790,11 +790,33 @@ h1 span{
     }
 
 
+/*----------------------------------pre-footer--------------------------------*/
 
-
-
-
-
+.pre-footer{
+    background: radial-gradient(120.19% 65.75% at -30.21% 2.58%,rgba(255,208,40,.3) 7.12%,rgba(197,118,0,.16) 42.28%,hsla(0,0%,9%,0) 100%),linear-gradient(189.22deg,#283009 -17.47%,#000 66.23%);
+    padding: 100px 0px;
+}
+.gallery{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-auto-rows: 220px;
+    grid-auto-flow: row dense;
+    max-width: 80%;
+    margin-inline: auto;
+}
+.gallery__item{
+    border-radius: 6px;
+    overflow: hidden;
+}
+.gallery__item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery__item:first-child{
+    
+}
 
 
 
