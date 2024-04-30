@@ -22,10 +22,11 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link
+    <link type="text/css" rel="stylesheet" href="css/locomotive-scroll.css">
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
+    /> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,11 +34,8 @@
       href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    
+    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script> -->
   </head>
@@ -66,7 +64,7 @@
         </div>
       </div>
     </header>
-    <div data-scroll-container class="loco-container">
+    <div class="scroll-container">
       <section class="banner" data-scroll-section data-scroll-speed="1">
         <div class="container">
           <div class="banner__inner">
@@ -308,57 +306,59 @@
       <section class="latest-track" data-scroll-section data-scroll-speed="1">
         <div class="container">
           <div class="section-heading">
-            <h3 class="section-heading__main">Latest tracks</h3>
-            <p class="section-heading__text">Fresh Beats: Dive into Our Latest Track Selections!</p>
+              <h3 class="section-heading__main">Latest tracks</h3>
+              <p class="section-heading__text">Fresh Beats: Dive into Our Latest Track Selections!</p>
           </div>
           <div class="latest-track__slider">
-            <div class="latest-track__slider--model">
-              <div class="latest-track__slider--model__card">
-                <a href="#!">
-                  <div class="latest-track-image"><img src="./images/listening2.jpg" alt="listening to music"></div>
-                  <div class="latest-track__text-wrap">
-                    <div>
-                      <h4>Lorem Ipsum dolor sit</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt</p>
-                        <div class="latest-track__btn">
-                          <button type="button" id="play-track" class="btn-theme btn--secondary">
-                            play now
-                          </button>
-                          <button type="button" id="buy-track" class="btn-theme">
-                            buy now
-                          </button>
-                        </div>
+            <!-- <div class="latest-track__slider--model__wrap"> -->
+              <div class="latest-track__slider--model">
+                <div class="latest-track__slider--model__card">
+                  <a href="#!">
+                    <div class="latest-track-image"><img src="./images/listening2.jpg" alt="listening to music"></div>
+                    <div class="latest-track__text-wrap">
+                      <div>
+                        <h4>Lorem Ipsum dolor sit</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor incididunt</p>
+                          <div class="latest-track__btn">
+                            <button type="button" id="play-track" class="btn-theme btn--secondary">
+                              play now
+                            </button>
+                            <button type="button" id="buy-track" class="btn-theme">
+                              buy now
+                            </button>
+                          </div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
-              <div class="latest-track__slider--model__card">
-                <a href="#!">
-                  <div class="latest-track-image"><img src="./images/listening8.png" alt="listening to music"></div>
-                  <div class="latest-track__text-wrap">
-                    <div>
-                      <h4>Lorem Ipsum dolor sit</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt</p>
-                        <div class="latest-track__btn">
-                          <button type="button" id="play-track" class="btn-theme btn--secondary">
-                            play now
-                          </button>
-                          <button type="button" id="buy-track" class="btn-theme">
-                            buy now
-                          </button>
-                        </div>
+                  </a>
+                </div>
+                <div class="latest-track__slider--model__card">
+                  <a href="#!">
+                    <div class="latest-track-image"><img src="./images/listening8.png" alt="listening to music"></div>
+                    <div class="latest-track__text-wrap">
+                      <div>
+                        <h4>Lorem Ipsum dolor sit</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor incididunt</p>
+                          <div class="latest-track__btn">
+                            <button type="button" id="play-track" class="btn-theme btn--secondary">
+                              play now
+                            </button>
+                            <button type="button" id="buy-track" class="btn-theme">
+                              buy now
+                            </button>
+                          </div>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
           <a href="#!" class="btn-theme">More tracks</a>
         </div>
       </section>
-      <section class="pre-footer" data-scroll-section data-scroll-speed="1">
+      <section class="pre-footer panel" data-scroll-section data-scroll-speed="1">
         <div class="container">
           <div class="section-heading">
             <h3 class="section-heading__main">Immerse Yourself</h3>
@@ -404,6 +404,48 @@
           </div>
         </div>
       </section>
+      <section class="panel" style="height: 100vh;background: rgba(0,0,0,.7);" data-scroll-section data-scroll-speed="1"></section>
+      <div class="gridgallery" data-scroll-section data-scroll-speed="1">
+        <div class="big">
+            <img src="images/bg-landscape.jpg" alt="">
+        </div>
+        <div class="vertical">
+            <img src="images/carnival.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/dj-sound.jpg" alt="">
+        </div>
+        <div class="horizontal">
+            <img src="images/dj.jpg" alt="">
+        </div>
+        <div class="vertical">
+            <img src="images/drums.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/female-with-headphone.jpg" alt="">
+        </div>
+        <div class="horizontal">
+            <img src="images/female-with-headphone1.png" alt="">
+        </div>
+        <div class="big">
+            <img src="images/bg-landscape.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/carnival.jpg" alt="">
+        </div>
+        <div class="vertical">
+            <img src="images/guitar-room.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/listening2.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/instruments-bulk.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/mood-with-pop.jpg" alt="">
+        </div>
+    </div>
       <!-- <section style="min-height: 800px"></section> -->
     </div>
 
@@ -411,8 +453,7 @@
       document.addEventListener("mousemove", parallax);
       function parallax(e) {
         document
-          .querySelectorAll(".banner__object--image")
-          .forEach(function (move) {
+          .querySelectorAll(".banner__object--image").forEach(function (move) {
             var movingValue = move.getAttribute("data-value");
             var x = (e.clientX * movingValue) / 150;
             var y = (e.clientY * movingValue) / 150;
@@ -422,6 +463,15 @@
           });
       }
     </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- <script src="js/gsap.min.js"></script> -->
+    <script src="js/gsap-latest-beta.min.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <script src="js/custom.js"></script>
   </body>
 </html>
