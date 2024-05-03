@@ -69,19 +69,19 @@ ScrollTrigger.scrollerProxy(pageContainer, {
     //   }
     // });
 
-    let panels = gsap.utils.toArray(".panel");
-    // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
-    let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
+    // let panels = gsap.utils.toArray(".panel");
+    // // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
+    // let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
 
-    panels.forEach((panel, i) => {
-      ScrollTrigger.create({
-        scroller: "[data-scroll-container]",
-        trigger: panel,
-        start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
-        pin: true, 
-        pinSpacing: false 
-      });
-    });
+    // panels.forEach((panel, i) => {
+    //   ScrollTrigger.create({
+    //     scroller: "[data-scroll-container]",
+    //     trigger: panel,
+    //     start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+    //     pin: true, 
+    //     pinSpacing: false 
+    //   });
+    // });
 
     ScrollTrigger.matchMedia({
       
@@ -128,10 +128,33 @@ ScrollTrigger.scrollerProxy(pageContainer, {
       //       ease: "none"
       //   });
       // });
+      
+      const mediaQuery = window.matchMedia('(min-width: 992px)')
+      if (mediaQuery.matches) {
+      const bgProgress = document.querySelector('.pre-footer__overlay');
+      const goalBlock = document.querySelector('.pre-footer'); 
+    
+      const scrollBgProgress = () => {
+        
+        let scrollBgDistance = ((goalBlock.getBoundingClientRect().top) + 100);
+        let bgProgressPercentage =
+          (scrollBgDistance /
+            (goalBlock.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
+      
+        let val = Math.floor(bgProgressPercentage);
+        bgProgress.style.opacity = val;
+      
+        if (val < 0) {
+          bgProgress.style.opacity = '0';
+        }
+      };
+      // window.addEventListener('scroll', scrollBgProgress);
+      scroller.on('scroll', scrollBgProgress);
+      }
+  
       scroller.on('scroll', ScrollTrigger.update);
-ScrollTrigger.addEventListener('refresh', () => scroller.update());
+      ScrollTrigger.addEventListener('refresh', () => scroller.update());
+      ScrollTrigger.refresh();
 
 
-ScrollTrigger.refresh();
-
-
+//background progress on section scroll
