@@ -838,6 +838,7 @@ h1 span{
     position: relative;
     background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(255, 208, 40, .12) 7.12%, rgba(15, 45, 56, .70) 42.28%, 
     rgba(1, 11, 12, 1) 100%), linear-gradient(189.22deg, var(--color-dark-olive) -17.47%, var(--color-black) 66.23%);
+    padding: 80px 0px;
 }
 
 .gallery{
