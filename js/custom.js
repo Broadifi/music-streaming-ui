@@ -16,7 +16,7 @@ window.onscroll=function(){
   });
   const showMenu = () => {
     document.querySelector(".mobile-menu__burger").classList.toggle("active");
-    document.querySelector(".menu-container").classList.toggle("show-menu");
+    document.querySelector(".menu-container__list").classList.toggle("show-menu");
     document.querySelector("body").classList.toggle("overflow-hide");
   };
 
@@ -85,8 +85,8 @@ ScrollTrigger.scrollerProxy(pageContainer, {
 
     ScrollTrigger.matchMedia({
       
-      "(min-width: 768px)": function() {
-        gsap.registerPlugin(ScrollTrigger);
+      "(min-width: 576px)": function() {
+        // gsap.registerPlugin(ScrollTrigger);
       
           let slideSections = gsap.utils.toArray(".latest-track__slider--model__card");
       
