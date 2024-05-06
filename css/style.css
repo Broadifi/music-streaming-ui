@@ -1233,6 +1233,7 @@ section{
 .footer-heading{
     font-size: var(--text-lg);
     color: var(--color-footer-heading);
+    margin-bottom: 20px;
 }
 .footer-top__menu li{
     margin-bottom: 10px;

@@ -57,31 +57,6 @@ ScrollTrigger.scrollerProxy(pageContainer, {
         },
         // pinType: pageContainer.style.transform ? "transform" : "fixed"
     });
-    // gsap.to("html", {
-    //   "--color1": "blue",
-    //   "--color2": "red",
-    //   scrollTrigger: {
-    //     pin: true,
-    //     trigger: ".gridgallery",
-    //     scroller: "[data-scroll-container]",
-    //     end: "+=1000",
-    //     scrub: true
-    //   }
-    // });
-
-    // let panels = gsap.utils.toArray(".panel");
-    // // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
-    // let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
-
-    // panels.forEach((panel, i) => {
-    //   ScrollTrigger.create({
-    //     scroller: "[data-scroll-container]",
-    //     trigger: panel,
-    //     start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
-    //     pin: true, 
-    //     pinSpacing: false 
-    //   });
-    // });
 
     ScrollTrigger.matchMedia({
       
@@ -92,7 +67,6 @@ ScrollTrigger.scrollerProxy(pageContainer, {
       
           gsap.to(slideSections, {
               xPercent: -100 * (slideSections.length - 1),
-              // x: document.querySelector(".latest-track__slider").offsetWidth - window.innerWidth,
               ease: "none",
               scrollTrigger: {
                   scroller: "[data-scroll-container]",
@@ -129,7 +103,7 @@ ScrollTrigger.scrollerProxy(pageContainer, {
       //   });
       // });
       
-      const mediaQuery = window.matchMedia('(min-width: 992px)')
+      const mediaQuery = window.matchMedia('(min-width: 200px)')
       if (mediaQuery.matches) {
       const bgProgress = document.querySelector('.pre-footer__overlay');
       const goalBlock = document.querySelector('.pre-footer'); 
@@ -156,5 +130,3 @@ ScrollTrigger.scrollerProxy(pageContainer, {
       ScrollTrigger.addEventListener('refresh', () => scroller.update());
       ScrollTrigger.refresh();
 
-
-//background progress on section scroll
