@@ -956,18 +956,18 @@ section{
     right: 0%;
 }
 .circle1{
-    -webkit-animation: rotating 130s linear infinite;
-    -moz-animation: rotating 130s linear infinite;
-    -ms-animation: rotating 130s linear infinite;
-    -o-animation: rotating 130s linear infinite;
-    animation: rotating 130s linear infinite;
+    -webkit-animation: rotating 100s linear infinite;
+    -moz-animation: rotating 100s linear infinite;
+    -ms-animation: rotating 100s linear infinite;
+    -o-animation: rotating 100s linear infinite;
+    animation: rotating 100s linear infinite;
 }
 .artist-circle__person.circle1{
-    -webkit-animation: rotating 130s linear reverse infinite;
-    -moz-animation: rotating 130s linear reverse infinite;
-    -ms-animation: rotating 130s linear reverse infinite;
-    -o-animation: rotating 130s linear reverse infinite;
-    animation: rotating 130s linear reverse infinite;
+    -webkit-animation: rotating 100s linear reverse infinite;
+    -moz-animation: rotating 100s linear reverse infinite;
+    -ms-animation: rotating 100s linear reverse infinite;
+    -o-animation: rotating 100s linear reverse infinite;
+    animation: rotating 100s linear reverse infinite;
 }
 
 .artist-circle__crowd.sub-circle1{
@@ -990,18 +990,18 @@ section{
 }
 
 .circle2{
-    -webkit-animation: rotating 80s linear infinite;
-    -moz-animation: rotating 80s linear infinite;
-    -ms-animation: rotating 80s linear infinite;
-    -o-animation: rotating 80s linear infinite;
-    animation: rotating 80s linear infinite;
+    -webkit-animation: rotating 50s linear infinite;
+    -moz-animation: rotating 50s linear infinite;
+    -ms-animation: rotating 50s linear infinite;
+    -o-animation: rotating 50s linear infinite;
+    animation: rotating 50s linear infinite;
 }
 .artist-circle__person.circle2{
-    -webkit-animation: rotating 80s linear reverse infinite;
-    -moz-animation: rotating 80s linear reverse infinite;
-    -ms-animation: rotating 80s linear reverse infinite;
-    -o-animation: rotating 80s linear reverse infinite;
-    animation: rotating 80s linear reverse infinite;
+    -webkit-animation: rotating 50s linear reverse infinite;
+    -moz-animation: rotating 50s linear reverse infinite;
+    -ms-animation: rotating 50s linear reverse infinite;
+    -o-animation: rotating 50s linear reverse infinite;
+    animation: rotating 50s linear reverse infinite;
 }
 .artist-circle__crowd.sub-circle4a{
     top: 12%;
