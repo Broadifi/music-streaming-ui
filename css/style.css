@@ -38,6 +38,13 @@
     --color-green: #60aa7a;
     --color-footer-heading: #e3f3db;
     --color-secondary-green: #b7f1cd;
+    --color-dark-green: #122620;
+    --color-bg-darkgreen: #0f2d38;
+    --color-seagreen: #10dbc8;
+    --color-moss-green: #1b2d2c;
+    --color-dark-olive: #283009;
+    --color-greenish-grey: #434646;
+    --color-yellowish-grey: #66685c;
 }
 
 
@@ -64,7 +71,7 @@ a{
 
 body{
     background: var(--color-dark);
-    background: #122620;
+    background: var(--color-dark-green);
     font-family: "Anybody", sans-serif;
 }
 
@@ -197,9 +204,9 @@ body{
 /*---------------------------banner------------------------------*/
 .banner{
     position: relative;
-    background: radial-gradient(circle, rgba(74, 50, 23, .59) 20%, rgba(18, 23, 24, 1) 100%);
-    background: radial-gradient(circle, rgba(5, 68, 94, .12) 0%, rgba(18, 23, 24, 1) 44%);
-    background: linear-gradient(to top right, #0f2d38 30%, #10dbc8 228%);
+    /* background: radial-gradient(circle, rgba(74, 50, 23, .59) 20%, rgba(18, 23, 24, 1) 100%);
+    background: radial-gradient(circle, rgba(5, 68, 94, .12) 0%, rgba(18, 23, 24, 1) 44%); */
+    background: linear-gradient(to top right, var(--color-bg-darkgreen) 30%, var(--color-seagreen) 228%);
     overflow-x: hidden;
 }
 .banner__inner{
@@ -264,7 +271,7 @@ h1 span{
     display: inline-block;
     padding: 10px 30px;
     background-image: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen) 43%);
-    background-image: linear-gradient(to right, #c1f9a7, var(--color-themegreen) 43%);
+    background-image: linear-gradient(to right, var(--color-theme-lime), var(--color-themegreen) 43%);
     background-size: 300% 100%;
     transition: background .3s ease-in-out, color .3s ease-in-out;
     border-radius: 30px;
@@ -529,11 +536,11 @@ h1 span{
 }
 .music-type__tab-menu .nav-link:hover{
     border-color: rgba(221,238,231,.25);
-    background: #1b2d2c;
+    background: var(--color-moss-green);
 }
 .music-type__tab-menu .nav-item.show, .music-type__tab-menu .nav-link.active{
     
-    background: #1b2d2c;
+    background: var(--color-moss-green);
     border-color: transparent; 
 }
 
@@ -546,8 +553,7 @@ h1 span{
     bottom: -3px;
     left: -3px;
     right: -3px;
-    background: linear-gradient(var(--gradient-angle), rgb(36, 58, 52, 1), rgba(141, 178, 193, .58));
-    background: linear-gradient(var(--gradient-angle), #1b2d2c, rgb(193, 249, 167, .51));
+    background: linear-gradient(var(--gradient-angle), var(--color-moss-green), rgb(193, 249, 167, .51));
     border-radius: 30px;
     animation: rotation 3s linear 0s infinite normal forwards;
 }
@@ -620,7 +626,6 @@ h1 span{
         content: "";
         height: 100%;
         width: 100%;
-        /* background: linear-gradient(to right, #0f2d3800, #10dbc8a1); */
         box-shadow: inset 350px 0px 350px rgba(14, 18, 12, .9);
         position: absolute;
         inset: 0;
@@ -672,7 +677,7 @@ h1 span{
         padding: 80px 0px;
         text-align: center;
         background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(236, 243, 219, .10) 7.12%, 
-        rgba(10, 36, 28, 1) 42.28%, rgba(23, 23, 23, 1) 100%), linear-gradient(189.22deg, #283009 -17.47%, #000 66.23%);
+        rgba(10, 36, 28, 1) 42.28%, rgba(23, 23, 23, 1) 100%), linear-gradient(189.22deg, var(--color-dark-olive) -17.47%, var(--color-black) 66.23%);
     }
     .latest-track__slider--model{
         width: 100%;
@@ -754,7 +759,7 @@ h1 span{
         bottom: -3px;
         left: -3px;
         right: -3px;
-        background: linear-gradient(var(--gradient-angle), #434646, rgb(106 145 153 / 51%));
+        background: linear-gradient(var(--gradient-angle), var(--color-greenish-grey), rgba(106, 145, 153, .51));
         /* animation: rotation 3s linear 0s infinite normal forwards; */
         border-radius: 6px;
         z-index: 0;
@@ -777,8 +782,8 @@ h1 span{
     }
     .btn--secondary{
         background: transparent;
-        border: 2px solid #c1f9a7;
-        color: #c1f9a7;
+        border: 2px solid var(--color-theme-lime);
+        color: var(--color-theme-lime);
         transition: border-color .3s ease-in-out, color .3s ease-in-out;
     }
     .btn--secondary:hover, .btn--secondary:focus{
@@ -813,13 +818,8 @@ h1 span{
 
 .pre-footer{
     position: relative;
-    background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(255, 208, 40, .29) 7.12%, rgba(0, 197, 139, .09) 42.28%, 
-    rgba(23, 23, 23, 0) 100%), linear-gradient(189.22deg, #283009 -17.47%, #000 66.23%);
-    padding: 100px 0px;
-    background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(255, 208, 40, .12) 7.12%, rgba(4, 76, 55, .27) 42.28%, 
-    rgba(26, 23, 1, .50) 100%), linear-gradient(189.22deg, #283009 -17.47%, #000 66.23%);
     background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(255, 208, 40, .12) 7.12%, rgba(15, 45, 56, .70) 42.28%, 
-    rgba(1, 11, 12, 1) 100%), linear-gradient(189.22deg, #283009 -17.47%, #000 66.23%);
+    rgba(1, 11, 12, 1) 100%), linear-gradient(189.22deg, var(--color-dark-olive) -17.47%, var(--color-black) 66.23%);
 }
 
 .gallery{
@@ -886,7 +886,7 @@ h1 span{
 .pre-footer__overlay{
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 20%, #000 80%);
+    background: linear-gradient(to bottom, transparent 20%, var(--color-black) 80%);
     mix-blend-mode: darken;
     z-index: 1;
     width: 100%;
@@ -902,8 +902,8 @@ section{
 /*--------------------------------------------Artist section----------------------------------------*/
 .artist-view__forum{
     background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, 
-    rgba(255, 208, 40, .12) 7.12%, rgb(15 45 56 / 42%) 42.28%, rgb(10 0 7) 100%), 
-    linear-gradient(189.22deg, #66685c -17.47%, #000 66.23%);
+    rgba(255, 208, 40, .12) 7.12%, rgba(15, 45, 56, .42) 42.28%, rgba(10, 0, 7, 1) 100%), 
+    linear-gradient(189.22deg, var(--color-yellowish-grey) -17.47%, var(--color-black) 66.23%);
     padding: 70px 0px 300px;
     position: relative;
 }
@@ -1070,7 +1070,7 @@ section{
 .artist-circle__card{
     aspect-ratio: 1;
     opacity: 0;
-    color: #fff;
+    color: var(--color-white);
     cursor: pointer;
     border-radius: 50%;
     flex-flow: column;
