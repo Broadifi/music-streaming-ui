@@ -1526,7 +1526,7 @@ section{
         opacity: 0;
         transition: opacity 0.3s ease-in-out, transform 0.3s ease-in;
         position: fixed;
-        top: calc(100vh - 70px);
+        top: calc(100vh - 110px);
         left: 50%;
         width: 170px;
     }
