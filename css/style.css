@@ -695,13 +695,27 @@ h1 span{
         z-index: 1;
         margin-bottom: 60px;
     }
+    
+    .latest-track__slider--model{
+        height: 100%;
+        /* width: 200%; */
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .latest-track__slider{
+        overflow: hidden;
+        display: flex;
+        padding: 0px 50px;
+        margin-top: 50px;
+    }
+    
     .latest-track__slider--model__card{
         border-radius: 10px;  
         z-index: 0;
         position: relative;
         text-align: left;
-        margin-right: 30px;
-        /* width: 100%; */
+        margin-inline: 12px;
+        width: 100%;
     
     }
     .latest-track__slider--model__card a{
@@ -732,11 +746,6 @@ h1 span{
     }
 
     .latest-track__text-wrap{
-        /* position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 50%; */
         color: var(--color-theme-lightgreen);
         display: flex;
         flex-direction: column;
@@ -746,12 +755,6 @@ h1 span{
         position: relative;
     }
     .latest-track__slider--model__card::before{
-        /* content: "";
-        height: 100%;
-        width: 100%;
-        box-shadow: inset -300px 0px 300px rgb(181 71 181 / 22%);
-        position: absolute;
-        inset: 0; */
         content: "";
         width: calc(100% + 6px);
         height: calc(100% + 6px);
@@ -761,7 +764,7 @@ h1 span{
         left: -3px;
         right: -3px;
         background: linear-gradient(var(--gradient-angle), var(--color-greenish-grey), rgba(106, 145, 153, .51));
-        /* animation: rotation 3s linear 0s infinite normal forwards; */
+        animation: rotation 3s linear 0s infinite normal forwards;
         border-radius: 6px;
         z-index: 0;
     }
@@ -808,28 +811,7 @@ h1 span{
     .btn--secondary:hover svg g, .btn--secondary:focus svg g{
         fill: var(--color-themegreen);
     }
-    .latest-track__slider--model{
-        height: 100%;
-        width: 200%;
-        display: flex;
-        flex-wrap: nowrap;
-        position: relative;
-        /* display: flex;
-        flex-wrap: nowrap;
-        margin: 50px 0px; */
-    }
-    .latest-track__slider{
-        /* height: 100vh;*/
-        overflow: hidden;
-        display: flex;
-        padding: 0px 50px;
-        margin-top: 50px;
-    }
-    .latest-track__slider--model__wrap{
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-    }
+    
 
 
 /*----------------------------------pre-footer--------------------------------*/
@@ -1327,6 +1309,9 @@ section{
         min-height: 450px;
         max-height: 450px;
     }
+    .latest-track__text-wrap{
+        padding: 35px 50px;
+    }
 }
 
 @media (max-width: 1200px){
@@ -1344,6 +1329,9 @@ section{
     }
     .latest-track__text-wrap h4 {
         font-size: var(--text-mb5xl);
+    }
+    .latest-track__btn button{
+        padding: 10px 20px;
     }
     
 }
@@ -1441,11 +1429,11 @@ section{
     }
 
     .latest-track__slider--model__card a{
-        min-width: 585px;
-        max-width: 585px;
+        min-width: 570px;
+        max-width: 570px;
         min-height: 330px;
         max-height: 330px; 
-        grid-template-columns: 47% 1fr;
+        grid-template-columns: 46% 1fr;
     }
     .latest-track__text-wrap h4 {
         font-size: var(--text-mb4xl);
@@ -1454,7 +1442,10 @@ section{
         gap: 8px;
     }
     .latest-track__text-wrap {
-        padding: 20px 23px;
+        padding: 20px;
+    }
+    .latest-track__btn button {
+        padding: 10px 15px;
     }
 
     .footer-top__grid{
@@ -1694,6 +1685,9 @@ section{
     .latest-track__slider{
         padding: 0px 20px;
     }
+    .latest-track__text-wrap p{
+        display: none;
+    }
 }
 @media (max-width:576px){
     .menu-container.show-menu  .btn-theme{
@@ -1752,15 +1746,12 @@ section{
     }
     .latest-track__slider--model{
         width: 100%;
-        flex-wrap: wrap;
     }
     .latest-track__slider--model__card{
-        margin: 0px 0px 20px;
         width: 100%;
     }
     .latest-track__slider--model__card a{
-        min-width: 100%;
-        width: 100%;
+        min-width: 280px;
     }
     .latest-track__slider{
         padding: 0px 4px;
@@ -1768,6 +1759,15 @@ section{
     }
     .latest-track__text-wrap p{
         display: none;
+    }
+    .latest-track__btn button span{
+        display: none;
+    }
+    .latest-track__btn button{
+        padding: 6px 15px;
+    }
+    .latest-track__text-wrap h4 {
+        font-size: var(--text-mxl);
     }
     
     
@@ -1792,12 +1792,7 @@ section{
         font-size: var(--text-sm);
         max-width: 350px;
     }
-    .latest-track__btn button span{
-        display: none;
-    }
-    .latest-track__text-wrap h4 {
-        font-size: var(--text-mxl);
-    }
+    
     .latest-track-image {
         height: 160px;
     }

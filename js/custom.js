@@ -58,51 +58,30 @@ ScrollTrigger.scrollerProxy(pageContainer, {
         // pinType: pageContainer.style.transform ? "transform" : "fixed"
     });
 
-    // ScrollTrigger.matchMedia({
+    ScrollTrigger.matchMedia({
       
-    //   "(min-width: 576px)": function() {
-    //     // gsap.registerPlugin(ScrollTrigger);
+      "(min-width: 200px)": function() {
+        // gsap.registerPlugin(ScrollTrigger);
       
-    //       let slideSections = gsap.utils.toArray(".latest-track__slider--model__card");
+          let slideSections = gsap.utils.toArray(".latest-track__slider--model__card");
       
-    //       gsap.to(slideSections, {
-    //           xPercent: -100 * (slideSections.length - 1),
-    //           ease: "none",
-    //           scrollTrigger: {
-    //               scroller: "[data-scroll-container]",
-    //               trigger: ".latest-track__slider",
-    //               start: "top",
-    //               pin: true,
-    //               scrub: 1,
-    //               // snap: 1 / (sections.length - 1),
-    //               end: () => "+=" + document.querySelector(".latest-track__slider").offsetWidth,
-    //               // invalidateOnRefresh: true
-    //           }
-    //       }); 
-    //   },
-    //   });
+          gsap.to(slideSections, {
+              xPercent: -100 * (slideSections.length - 1),
+              ease: "none",
+              scrollTrigger: {
+                  scroller: "[data-scroll-container]",
+                  trigger: ".latest-track__slider",
+                  start: "top",
+                  pin: true,
+                  scrub: 1,
+                  // snap: 1 / (sections.length - 1),
+                  end: () => "+=" + document.querySelector(".latest-track__slider").offsetWidth,
+                  // invalidateOnRefresh: true
+              }
+          }); 
+      },
+      });
 
-      // let horizontalSections = document.querySelectorAll(".latest-track__slider");
-
-      // horizontalSections.forEach((horizontalSection) => {
-      //   let pinWrap = horizontalSection.querySelector(".latest-track__slider--model__wrap");
-      //   let pinWrapWidth = pinWrap.offsetWidth;
-      //   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-      //   gsap.to(pinWrap, {
-      //       scrollTrigger: {
-      //           scroller: "[data-scroll-container]",
-      //           scrub: true,
-      //           trigger: horizontalSection,
-      //           pin: true,
-      //           start: "top top",
-      //           end: () => `+=${pinWrapWidth}`,
-      //           invalidateOnRefresh: true
-      //       },
-      //       x: -horizontalScrollLength,
-      //       ease: "none"
-      //   });
-      // });
-      
       const mediaQuery = window.matchMedia('(min-width: 200px)')
       if (mediaQuery.matches) {
       const bgProgress = document.querySelector('.pre-footer__overlay');
