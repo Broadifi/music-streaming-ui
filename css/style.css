@@ -956,18 +956,18 @@ section{
     right: 0%;
 }
 .circle1{
-    -webkit-animation: rotating 100s linear infinite;
-    -moz-animation: rotating 100s linear infinite;
-    -ms-animation: rotating 100s linear infinite;
-    -o-animation: rotating 100s linear infinite;
-    animation: rotating 100s linear infinite;
+    -webkit-animation: rotating 85s linear infinite;
+    -moz-animation: rotating 85s linear infinite;
+    -ms-animation: rotating 85s linear infinite;
+    -o-animation: rotating 85s linear infinite;
+    animation: rotating 85s linear infinite;
 }
 .artist-circle__person.circle1{
-    -webkit-animation: rotating 100s linear reverse infinite;
-    -moz-animation: rotating 100s linear reverse infinite;
-    -ms-animation: rotating 100s linear reverse infinite;
-    -o-animation: rotating 100s linear reverse infinite;
-    animation: rotating 100s linear reverse infinite;
+    -webkit-animation: rotating 85s linear reverse infinite;
+    -moz-animation: rotating 85s linear reverse infinite;
+    -ms-animation: rotating 85s linear reverse infinite;
+    -o-animation: rotating 85s linear reverse infinite;
+    animation: rotating 85s linear reverse infinite;
 }
 
 .artist-circle__crowd.sub-circle1{
