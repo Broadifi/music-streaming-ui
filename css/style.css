@@ -465,7 +465,8 @@ h1 span{
     background: rgba(18, 23, 24, .72);
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 1;
+    transition: background .3s ease-in-out;
 }
 .music-type__card-link:after{
     content: "";
@@ -479,13 +480,17 @@ h1 span{
 .music-type__card:hover{
     border-color: rgba(221,238,231,.45);
 }
+.music-type__card:hover .music-type__card-link::before{
+    background: transparent;
+    transition: background .3s ease-in-out;
+}
 .music-type__card:hover .music-type__card-link:after{
     content: "";
     height: 100%;
     width: 100%;
     position: absolute;
     inset: 0;
-    background: rgb(15, 45, 56, .65);
+    background: rgb(15, 45, 56, .77);
     transition: background .3s ease-in-out;
 }
 
@@ -493,6 +498,12 @@ h1 span{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(0.7);
+    transition: filter .3s ease-in-out;
+}
+.music-type__card:hover img{
+    filter: grayscale(0);
+    transition: filter .3s ease-in-out;
 }
 .music-type__card h4{
     font-size: var(--text-xl);
