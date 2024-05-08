@@ -49,26 +49,26 @@ gsap.to(container, {
   }
 })
 
-const sections = gsap.utils.toArray('.appear-down')
+// const sections = gsap.utils.toArray('.appear-down')
 
-sections.forEach(function (sec, i) {	
-  const y = sec.offsetTop - 100
-  gsap.fromTo(sec, {
-    y: 100,
-    opacity: 0,
-    scale: 0.9,
-  }, {
-    y: 0,
-    opacity: 1,
-    scale: 1,
-    scrollTrigger: {
-      trigger: sec,
-      scrub: 1,
-      start: 'top bottom',
-      end: '+=200',
-    }
-  })
-})
+// sections.forEach(function (sec, i) {	
+//   const y = sec.offsetTop - 100
+//   gsap.fromTo(sec, {
+//     y: 100,
+//     opacity: 0,
+//     scale: 0.9,
+//   }, {
+//     y: 0,
+//     opacity: 1,
+//     scale: 1,
+//     scrollTrigger: {
+//       trigger: sec,
+//       scrub: 1,
+//       start: 'top bottom',
+//       end: '+=200',
+//     }
+//   })
+// })
 
 
 
