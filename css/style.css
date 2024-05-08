@@ -1027,6 +1027,17 @@ section{
     transform: rotate(-60deg);
 }
 
+@media screen and (prefers-reduced-motion: no-preference) {
+    .artist-circle__rotator{
+        display: flex;
+    }
+}
+@media screen and (prefers-reduced-motion) {
+    .artist-circle__rotator{
+        display: none;
+    }
+}
+
 
 .artist-circle__crowd{
     width: 6%;
