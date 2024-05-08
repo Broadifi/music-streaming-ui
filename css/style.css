@@ -554,6 +554,7 @@ h1 span{
     border-radius: 30px;
     padding: 13px 10px;
     min-width: 100%;
+    width: max-content;
     color: rgb(228, 244, 221, .9) !important;
     text-transform: uppercase;
     position: relative;
