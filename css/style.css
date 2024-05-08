@@ -278,10 +278,7 @@ h1 span{
     /* animation: fadeInUp .9s linear; */
     
 }
-.banner__text .btn-theme{
-    animation: fadeIn .4s linear;
-    
-}
+
 .btn-theme{
     display: inline-block;
     padding: 10px 30px;
@@ -296,14 +293,17 @@ h1 span{
     font-weight: 500;
     border-color: transparent;
     text-transform: capitalize;
+    transition-property: all !important;
 }
 .btn-theme:hover, .btn-theme:focus {
     background-position: 26% 0;
     color: var(--color-bottle-green);
+    transition-property: all !important;
 }
 .banner__text .btn-theme{
     animation: fadeIn 2s linear;
     transition: background .3s ease-in-out, color .3s ease-in-out, animation 1s ease-in;
+    
    
 }
 .banner__object{
