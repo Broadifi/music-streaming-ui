@@ -21,33 +21,59 @@ window.onscroll=function(){
   };
 
 
+  const lenis = new Lenis()
 
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-const container = document.querySelector(".scroll-container")
-
-let height
-function setHeight() {
-  height = container.clientHeight
-  document.body.style.height = height + "px"
-}
-ScrollTrigger.addEventListener("refreshInit", setHeight)
-
-// smooth scrolling container
-gsap.to(container, {
-  y: () => -(height - document.documentElement.clientHeight),
-  ease: "none",
-  scrollTrigger: {
-    trigger: document.body,
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 0.5,
-    invalidateOnRefresh: true
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+  
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
   }
-})
+  
+  requestAnimationFrame(raf);
+
+
+// gsap.registerPlugin(ScrollTrigger);
+// const lenis = new Lenis()
+
+// lenis.on('scroll', (e) => {
+//   console.log(e)
+// })
+
+// lenis.on('scroll', ScrollTrigger.update)
+
+// gsap.ticker.add((time)=>{
+//   lenis.raf(time * 1000)
+// })
+
+// gsap.ticker.lagSmoothing(0)
+
+
+// ScrollTrigger.normalizeScroll(true);
+
+// const container = document.querySelector(".scroll-container")
+
+// let height
+// function setHeight() {
+//   height = container.clientHeight
+//   document.body.style.height = height + "px"
+// }
+// ScrollTrigger.addEventListener("refreshInit", setHeight)
+
+// // smooth scrolling container
+// gsap.to(container, {
+//   y: () => -(height - document.documentElement.clientHeight),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: document.body,
+//     start: "top top",
+//     end: "bottom bottom",
+//     scrub: 0.5,
+//     invalidateOnRefresh: true
+//   }
+// })
 
 // const sections = gsap.utils.toArray('.appear-down')
 
@@ -77,24 +103,24 @@ gsap.to(container, {
 //         "(min-width: 200px)": function() {
 //           gsap.registerPlugin(ScrollTrigger);
         
-            // let slideSections = gsap.utils.toArray(".latest-track__slider--model__card");
+//             let slideSections = gsap.utils.toArray(".latest-track__slider--model__card");
         
-            // gsap.to(slideSections, {
-            //     xPercent: -100 * (slideSections.length - 1),
-            //     ease: "none",
-            //     scrollTrigger: {
-            //         // scroller: "[data-scroll-container]",
-            //         trigger: ".latest-track__slider",
-            //         start: "top",
-            //         pin: true,
-            //         scrub: true,
-            //         snap: 1 / (sections.length - 1),
-            //         end: () => "+=" + document.querySelector(".latest-track__slider").offsetWidth,
-            //         // invalidateOnRefresh: true
-            //     }
-            // }); 
-        // },
-        // });
+//             gsap.to(slideSections, {
+//                 xPercent: -100 * (slideSections.length - 1),
+//                 ease: "none",
+//                 scrollTrigger: {
+//                     // scroller: "[data-scroll-container]",
+//                     trigger: ".latest-track__slider",
+//                     start: "top",
+//                     pin: true,
+//                     scrub: true,
+//                     snap: 1 / (sections.length - 1),
+//                     end: () => "+=" + document.querySelector(".latest-track__slider").offsetWidth,
+//                     // invalidateOnRefresh: true
+//                 }
+//             }); 
+//         },
+//         });
 
 const mediaQuery = window.matchMedia('(min-width: 200px)')
       if (mediaQuery.matches) {
@@ -118,7 +144,9 @@ const mediaQuery = window.matchMedia('(min-width: 200px)')
       window.addEventListener('scroll', scrollBgProgress);
       // scroller.on('scroll', scrollBgProgress);
     }
+    
 
+    //parallax element on banner
     document.addEventListener("mousemove", parallax);
       function parallax(e) {
         document
@@ -138,7 +166,6 @@ const mediaQuery = window.matchMedia('(min-width: 200px)')
       drag: 'free',
       // focus: 'center',
       perPage: 1,
-      // padding: '50px',
       gap: '50px',
       pagination: false,
       // arrows: false,
@@ -194,7 +221,7 @@ const mediaQuery = window.matchMedia('(min-width: 200px)')
 //                 height: window.innerHeight
 //             };
 //         },
-//         // pinType: pageContainer.style.transform ? "transform" : "fixed"
+//         pinType: pageContainer.style.transform ? "transform" : "fixed"
 //     });
 
 //     ScrollTrigger.matchMedia({
@@ -245,6 +272,11 @@ const mediaQuery = window.matchMedia('(min-width: 200px)')
 //       }
   
 //       scroller.on('scroll', ScrollTrigger.update);
-//       ScrollTrigger.addEventListener('refresh', () => scroller.update());
-//       ScrollTrigger.refresh();
+
+
+
+// ScrollTrigger.addEventListener('refresh', () => scroller.update());
+// ScrollTrigger.refresh();
+
+
 
