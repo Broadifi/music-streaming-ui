@@ -31,7 +31,6 @@ window.onscroll=function(){
     lenis.raf(time)
     requestAnimationFrame(raf)
   }
-  
   requestAnimationFrame(raf);
 
 
@@ -122,7 +121,7 @@ window.onscroll=function(){
 //         },
 //         });
 
-const mediaQuery = window.matchMedia('(min-width: 200px)')
+    const mediaQuery = window.matchMedia('(min-width: 200px)')
       if (mediaQuery.matches) {
       const bgProgress = document.querySelector('.pre-footer__overlay');
       const goalBlock = document.querySelector('.pre-footer'); 
@@ -190,6 +189,13 @@ const mediaQuery = window.matchMedia('(min-width: 200px)')
         },
       },
     }).mount(window.splide.Extensions);
+
+
+    AOS.init({
+      duration: 900,
+      easing: 'ease-out-cubic',
+      once: true,
+    });
 
 
 // const pageContainer = document.querySelector(".scroll-container");

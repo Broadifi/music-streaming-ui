@@ -33,7 +33,6 @@
     --color-black: #000000;
     --color-bottle-green: #01211e;
     --color-footerbg: #1e1f21;
-    /* --color-theme-lime: #c1f9a7; */
     --color-theme-lime: #dbf9cd;
     --color-theme-lightgreen: #dff8d4;
     --color-green: #60aa7a;
@@ -46,6 +45,7 @@
     --color-dark-olive: #283009;
     --color-greenish-grey: #434646;
     --color-yellowish-grey: #66685c;
+    --color-aqua: #0F7775;
 }
 
 html.lenis, html.lenis body {
@@ -112,6 +112,10 @@ body{
   }
 
 /*---------------------------------header---------------------------------*/
+.overflow-hidden{
+    overflow: hidden;
+}
+
 .header-main{
     position: fixed;
     inset-inline: 0;
@@ -152,7 +156,7 @@ body{
 }
 .menu-container__list ul li a{
     font-size: var(--text-xl);
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255,.85);
     text-transform: capitalize;
     transition: color 0.3s ease-in;
 }
@@ -200,15 +204,6 @@ body{
     top: -2px;
     animation: burger-bullet-2 2s ease-in-out infinite;
 }
-/* .mobile-menu__burger:hover span:first-child{
-    width: 16px;
-}
-.mobile-menu__burger:hover span:nth-child(2){
-    width: 22px;
-}
-.mobile-menu__burger:hover span:last-child{
-    width: 28px;
-} */
 
 
 @keyframes burger-bullet-1{
@@ -239,18 +234,23 @@ body{
 /*---------------------------banner------------------------------*/
 .banner{
     position: relative;
-    /* background: radial-gradient(circle, rgba(74, 50, 23, .59) 20%, rgba(18, 23, 24, 1) 100%);
-    background: radial-gradient(circle, rgba(5, 68, 94, .12) 0%, rgba(18, 23, 24, 1) 44%); */
-    background: linear-gradient(to top right, var(--color-bg-darkgreen) 30%, var(--color-seagreen) 228%);
+    background: linear-gradient(to top right, var(--color-bg-darkgreen) 30%, var(--color-seagreen) 170%);
+    /* background: linear-gradient(to top right, var(--color-bg-darkgreen) 32.44%, var(--color-aqua) 75.22%, 
+    var(--color-seagreen) 116.33%); */
     overflow-x: hidden;
 }
 .banner__inner{
     height: 100vh;
-    display: flex;
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
     position: relative;
+    display: grid;
+    grid-template-columns: 550px 1fr;
+    gap: 60px;
 }
 .banner__image{
-    z-index: 1;
+    /* z-index: 1;
     animation: fadeIn 1s linear;
     transition: animation 1s;
     transition-delay: 4s;
@@ -258,22 +258,222 @@ body{
     left: 25%;
     right: 0;
     bottom: 0;
-    top: 0;
+    top: 0; */
+    text-align: center;
+    padding-top: 82px;
 }
-.banner__image img{
+/* .banner__image img{
     display: block;
     height: 100vh;
     width: 100%;
+} */
+.banner-focus{
+    /* padding: 100px 170px; */
+    text-align: center;
+    position: relative;
+    display: inline-block;
 }
+.banner-focus__img{
+    display: inline-block;
+    max-width: 400px;
+    mix-blend-mode: overlay;
+}
+/* @keyframes blobber {
+    0% {
+      border-radius: 48% 52% 68% 32%/42% 28% 72% 58%;
+    }
+  
+    5% {
+      border-radius: 48% 52% 41% 59%/66% 37% 63% 34%;
+    }
+  
+    10% {
+      border-radius: 69% 31% 71% 29%/67% 31% 69% 33%;
+    }
+  
+    15% {
+      border-radius: 60% 40% 71% 29%/63% 65% 35% 37%;
+    }
+  
+    20% {
+      border-radius: 61% 39% 51% 49%/57% 58% 42% 43%;
+    }
+  
+    25% {
+      border-radius: 66% 34% 25% 75%/47% 30% 70% 53%;
+    }
+  
+    30% {
+      border-radius: 32% 68% 38% 62%/65% 60% 40% 35%;
+    }
+  
+    35% {
+      border-radius: 63% 37% 41% 59%/35% 38% 62% 65%;
+    }
+  
+    40% {
+      border-radius: 57% 43% 49% 51%/55% 71% 29% 45%;
+    }
+  
+    45% {
+      border-radius: 47% 53% 34% 66%/65% 36% 64% 35%;
+    }
+  
+    50% {
+      border-radius: 44% 56% 32% 68%/69% 26% 74% 31%;
+    }
+  
+    55% {
+      border-radius: 28% 72% 37% 63%/71% 44% 56% 29%;
+    }
+  
+    60% {
+      border-radius: 38% 62% 35% 65%/74% 53% 47% 26%;
+    }
+  
+    65% {
+      border-radius: 73% 27% 46% 54%/54% 47% 53% 46%;
+    }
+  
+    70% {
+      border-radius: 75% 25% 47% 53%/49% 53% 47% 51%;
+    }
+  
+    75% {
+      border-radius: 62% 38% 43% 57%/55% 60% 40% 45%;
+    }
+  
+    80% {
+      border-radius: 41% 59% 65% 35%/73% 50% 50% 27%;
+    }
+  
+    85% {
+      border-radius: 55% 45% 57% 43%/73% 61% 39% 27%;
+    }
+  
+    90% {
+      border-radius: 74% 26% 33% 67%/40% 65% 35% 60%;
+    }
+  
+    95% {
+      border-radius: 58% 42% 57% 43%/53% 45% 55% 47%;
+    }
+  
+    100% {
+      border-radius: 48% 52% 68% 32%/42% 28% 72% 58%;
+    }
+  } */
+.hero-mike__img{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+}
+.hero-mike__img img{
+    height: 100%;
+}
+
+  
+.banner-orbit__wrapper{
+    /* border: 3px solid #DCDCDC80; */
+    border: 3px solid rgba(201,177,85,.4);
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    padding: 25px;
+    box-shadow: inset 230px 0px 75px rgb(210 246 203 / 20%);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .banner-orbit__rotator{
+        display: flex;
+    }
+}
+@media screen and (prefers-reduced-motion) {
+    .banner-orbit__rotator{
+        display: none;
+    }
+}
+.banner-orbit__rotator {
+    pointer-events: none;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.banner-orbit__crowd.sub-circle1 {
+    transform: rotate(60deg);
+}
+.banner-orbit__crowd{
+    width: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    inset: -38px;
+}
+.banner-orbit__icon.top.circle1 {
+    transition: filter .5s ease-in-out;
+}
+.banner-orbit__icon.top {
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+}
+.banner-orbit__icon.bottom {
+    position: absolute;
+    top: auto;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.banner-orbit__icon.circle1 {
+    -webkit-animation: rotating 85s linear reverse infinite;
+    -moz-animation: rotating 85s linear reverse infinite;
+    -ms-animation: rotating 85s linear reverse infinite;
+    -o-animation: rotating 85s linear reverse infinite;
+    animation: rotating 85s linear reverse infinite;
+}
+.banner-orbit__icon{
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 50%;
+    padding-top: 100%;
+    position: static;
+    overflow: visible;
+}
+.banner-orbit__icon-spinner.spinner{
+    transform: rotate(-60deg);
+}
+.banner-orbit__icon-spinner {
+    z-index: 3;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.banner-orbit__icon-dp, .spinned-icon{
+    width: 100%;
+}
+.spinned-icon img{
+    width: 100%;
+}
+
+
 h1 span{
   color: var(--color-secondary-green);
 }
 .banner__text h1{
-    font-size: var(--text-7xl);
+    font-size: var(--text-8xl);
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.4;
     color: var(--color-theme-lightgreen);
-    /* animation: fadeInUp .8s linear; */
+    margin-bottom: 10px;
 }
 @keyframes fadeIn {
     0% { opacity: 0;}
@@ -285,7 +485,7 @@ h1 span{
 }
 
 .banner__text {
-    max-width: 350px;
+    /* max-width: 500px; */
     padding-top: 40px;
     color: rgba(255,255,255,.82);
     position: relative;
@@ -293,10 +493,9 @@ h1 span{
     align-self: center;
 }
 .banner__text p{
-    font-size: var(--text-md1);
-    margin: 0 0 20px;
-    /* animation: fadeInUp .9s linear; */
-    
+    font-size: var(--text-xl);
+    line-height: 1.6;
+    margin: 0 0 30px;
 }
 
 .btn-theme{
@@ -304,7 +503,7 @@ h1 span{
     padding: 10px 30px;
     background-image: linear-gradient(to right, var(--color-themeorange), var(--color-themegreen) 43%);
     background-image: linear-gradient(to right, var(--color-theme-lime), var(--color-themegreen) 43%);
-    background-size: 300% 100%;
+    background-size: 300% 160%;
     transition: background .3s ease-in-out, color .3s ease-in-out;
     border-radius: 30px;
     text-align: center;
@@ -342,7 +541,7 @@ h1 span{
 
 .banner__object--image:last-child{
     position: absolute;
-    left: 20%;
+    left: 35%;
     bottom: 20px;
     opacity: 0.65;
     
@@ -1368,9 +1567,6 @@ section{
 }
 
 @media (max-width: 1200px){
-    h1{
-        font-size: var(--text-9xl);
-    }
     .latest-track__slider--model__card{
         width: 750px !important;
         min-height: 400px;
@@ -1385,13 +1581,26 @@ section{
     .latest-track__btn button{
         padding: 10px 20px;
     }
+    .banner-focus__img{
+        max-width: 100%;
+    }
+    .banner__inner{
+        grid-template-columns: 430px 1fr;
+    }
+    .banner__text h1 {
+        font-size: var(--text-7xl);
+    }
+    .banner-orbit__icon.top{
+        top: 4px;
+    }
+    .banner-orbit__icon.bottom{
+        bottom: 4px;
+    }
     
 }
 
 @media (max-width: 1025px){
-    .banner__image img{
-        width: auto;
-    }
+    
     
 }
 
@@ -1399,14 +1608,11 @@ section{
 @media (max-width:991px){
     .banner__inner{
         height: inherit;
-        min-height: 500px;
+        min-height: 700px;
     }
-    .banner__image img {
-        height: 100%;
-        width: auto;
-    }
-    .banner__text {
-        max-width: 270px;
+    .banner__inner {
+        grid-template-columns: 1fr 300px;
+        gap: 35px;
     }
     .banner__text h1 {
         font-size: var(--text-mb5xl);
@@ -1619,13 +1825,20 @@ section{
     .banner__inner {
         height: inherit;
         min-height: 500px;
+        grid-template-columns: 1fr;
+        padding: 85px 0px 65px;
     }
     .banner__text {
-        max-width: 240px;
+        text-align: center;
     }
     .banner__image{
-        left: 20%;
-        mix-blend-mode: overlay;
+       padding-top: 25px;
+    }
+    .banner-focus__img {
+        max-width: 300px;
+    }
+    .banner-orbit__crowd{
+        width: 48px;
     }
     .banner__object{
         display: none;
@@ -1827,8 +2040,15 @@ section{
     .menu-container.show-menu  .btn-theme{
         width: 80%;
     }
-    .banner__image{
-        left: 7%;
+    .banner-focus__img {
+        max-width: 190px;
+    }
+    .hero-mike__img{
+        top: 50px;
+    }
+    .banner-orbit__crowd{
+        width: 40px;
+        inset: -30px;
     }
     .section-heading__main {
         font-size: var(--text-3xl);
