@@ -156,12 +156,12 @@ body{
 }
 .menu-container__list ul li a{
     font-size: var(--text-xl);
-    color: rgba(255,255,255,.85);
+    color: rgba(255,255,255,.7);
     text-transform: capitalize;
     transition: color 0.3s ease-in;
 }
-.menu-container__list ul li:hover a{
-    color: rgba(255,255,255,1);
+.menu-container__list ul li:hover a, .menu-container__list ul li.active a{
+    color: rgba(255,255,255,.9);
 }
 .logo img{
     max-width: 50px;
@@ -234,7 +234,7 @@ body{
 /*---------------------------banner------------------------------*/
 .banner{
     position: relative;
-    background: linear-gradient(to top right, var(--color-bg-darkgreen) 30%, var(--color-seagreen) 170%);
+    background: linear-gradient(to right, var(--color-bg-darkgreen) 40%, var(--color-seagreen) 190%);
     /* background: linear-gradient(to top right, var(--color-bg-darkgreen) 32.44%, var(--color-aqua) 75.22%, 
     var(--color-seagreen) 116.33%); */
     overflow-x: hidden;
@@ -376,7 +376,6 @@ body{
 
   
 .banner-orbit__wrapper{
-    /* border: 3px solid #DCDCDC80; */
     border: 3px solid rgba(201,177,85,.4);
     border-radius: 50%;
     position: relative;
@@ -1526,24 +1525,132 @@ section{
 }
 
 
-@media (min-width: 2200px){
-    .banner__image{
-        left: 15%;
+
+/*------------------------------------------About page-------------------------------------*/
+.hero-girl__img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hero-girl__img img{
+    height: 100%;
+}
+.about--banner__image{
+    align-self: end;
+    position: relative;
+}
+.about--banner__inner{
+    /* height: auto; */
+    padding: 150px 0px 0px;
+}
+.about--banner__inner .banner__text{
+    padding-bottom: 50px;
+}
+.about--banner__image .banner-focus__img{
+    min-width: 450px;
+}
+.about-bn__element-wrapper{
+    position: absolute;
+    top: -130px;
+    bottom: 100px;
+    left: -140px;
+    right: 0;
+}
+.about-bn__element-wrapper img:first-child{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.about-bn__element-wrapper img:nth-child(2){
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+.about-bn__element-wrapper img:nth-child(3){
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.about-bn__element-wrapper img:last-child{
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+}
+
+
+
+
+@media (min-width: 1600px) {
+    .banner-focus__img {
+        max-width: 100%;
+        min-width: 500px;
     }
-    .banner__image img{
-        width: auto;
+    .hero-mike__img{
+        top: 115px;
+    }
+}
+
+
+@media (min-width: 1800px){
+    section:not(.banner){
+        min-height: 85vh;
+        padding: 150px 0px;
+    }
+    .banner-focus__img {
+        min-width: 590px;
+    }
+    .banner__text h1 {
+        font-size: var(--text-9xl);
+    }
+    .banner__inner{
+        grid-template-columns: 600px 1fr;
+    }
+    .hero-mike__img{
+        top: 145px;
+    }
+    .banner-orbit__wrapper{
+        box-shadow: inset 300px 0px 150px rgb(210, 246, 203, .20);
+    }
+}
+
+
+@media (min-width: 2200px){
+    section:not(.banner){
+        min-height: 65vh;
+        padding: 80px 0px;
+    }
+    
+    .banner-focus__img {
+        min-width: 720px;
+    }
+    .hero-mike__img {
+        top: 180px;
+    }
+    .banner__inner {
+        grid-template-columns: 720px 1fr;
+    }
+    .banner__text h1 {
+        font-size: var(--text-mdbig);
+    }
+    .banner__text p {
+        font-size: var(--text-2xl);
     }
 }
 @media (min-width: 3000px){
-    .banner__image{
-        left: 8%;
+    .banner-focus__img {
+        min-width: 820px;
     }
 }
 
 @media (min-width: 4000px){
-    .banner__image{
-        left: 5%;
+    .banner-focus__img {
+        min-width: 920px;
     }
+    .hero-mike__img {
+        top: 210px;
+    }
+
     .artist-view__forum{
         padding: 70px 0px 480px;
     }

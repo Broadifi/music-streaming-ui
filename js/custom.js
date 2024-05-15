@@ -158,8 +158,22 @@ window.onscroll=function(){
               "translateX(" + x + "px) translateY(" + y + "px)";
           });
       };
- 
 
+      //parallax element on banner for About page
+    document.addEventListener("mousemove", parallaxAbout);
+    function parallaxAbout(e) {
+      document
+        .querySelectorAll(".about-bn__element").forEach(function (move) {
+          var movingValue = move.getAttribute("data-value");
+          var x = (e.clientX * movingValue) / 70;
+          var y = (e.clientY * movingValue) / 70;
+
+          move.style.transform =
+            "translateX(" + x + "px) translateY(" + y + "px)";
+        });
+    };
+ 
+    //auto sliding tracks block
       new Splide('.track-splide', {
       type: 'loop',
       drag: 'free',
@@ -189,13 +203,6 @@ window.onscroll=function(){
         },
       },
     }).mount(window.splide.Extensions);
-
-
-    AOS.init({
-      duration: 900,
-      easing: 'ease-out-cubic',
-      once: true,
-    });
 
 
 // const pageContainer = document.querySelector(".scroll-container");
