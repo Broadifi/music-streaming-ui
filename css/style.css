@@ -572,7 +572,7 @@ h1 span{
 }
 .section-heading__main{
     font-size: var(--text-6xl);
-    line-height: 1;
+    line-height: 1.5;
     color: rgba(255,255,255,.82);
     font-weight: 600;
     margin-bottom: 15px;
@@ -1417,7 +1417,7 @@ section{
     line-height: 2;
     color: rgba(221,238,231,.81);
     max-width: 800px;
-    margin: 50px auto 70px;
+    margin: 50px auto 40px;
 }
 
 
@@ -1617,7 +1617,7 @@ section{
     height: 100%;
 }
 .about__content-grid{
-    width: 40%;
+    width: 60%;
     padding: 65px 40px 40px 0px;
 }
 .about__content{
@@ -1635,7 +1635,7 @@ section{
     width: 140px;
     height: 100px;
     border-radius: 10px;
-    background: linear-gradient(to bottom, #36535a, #1d252a);
+    background: linear-gradient(to bottom, #4c747e, #1d252a);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1655,15 +1655,136 @@ section{
 .rising__track-grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    
+}
+.rising__track-card:hover{
+    box-shadow: 0px 10px 40px rgba(209, 246, 203, .3);
+    border: 1px solid rgba(209, 246, 203, .3);
 }
 .rising__track-card{
     background: #1c1d31;
-    border-radius: 15px;
+    border-radius: 25px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    text-align: center;
+    box-shadow: 0px 10px 40px transparent;
+    border: 1px solid transparent;
+}
+.rising__tracks{
+    padding: 80px 0px;
+}
+.rising__artist-card{
+    min-height: 250px;
+    max-height: 250px;
+    text-align: center;
+    padding-top: 45px;
+    margin-bottom: 25px;
+    border-radius: 0 0 25px 25px;
     overflow: hidden;
 }
-
-
+.rising__artist-card img{
+    min-height: 100%;
+    max-width: 100%;
+}
+.rising__track-card:first-child .rising__artist-card{
+    background: #549d96;
+}
+.rising__track-card:nth-child(2) .rising__artist-card{
+    background: #f0f0f0;
+}
+.rising__track-card:nth-child(3) .rising__artist-card{
+    background: #d48394;
+}
+.rising__track-card:nth-child(4) .rising__artist-card{
+    background: #e9c9a3;
+}
+.rising__track-card:last-child .rising__artist-card{
+    background: #92e4b9;
+}
+.rising__track-card h4{
+    font-size: var(--text-lg);
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 0px;
+    transition: all .3s;
+}
+.rising__track-card:hover h4{
+    color: rgba(255,255,255,.82);
+    transition: all .3s;
+}
+.rising__tracks .section-heading__main{
+    max-width: 600px;
+    margin: 0 auto 15px;
+}
+.more__about-music{
+    background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, 
+    rgba(255, 208, 40, .12) 7.12%, rgba(15, 45, 56, .42) 42.28%, rgba(10, 0, 7, 1) 100%), 
+    linear-gradient(189.22deg, var(--color-yellowish-grey) -17.47%, var(--color-black) 66.23%);
+    padding: 65px 0px;
+}
+.more__genre-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto 60px;
+}
+.more__genre-card{
+    background: linear-gradient(to top right, rgba(32,33,53,1), #1c1d31);
+    padding: 40px 30px;
+    border-radius: 20px;
+    color: rgba(255,255,255,.75) !important;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+.more__genre-card:hover{
+    border: 1px solid rgba(255,255,255,.2);
+}
+.more__genre-card::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    box-shadow: inset -80px 0px 80px rgb(0, 0, 0, .64);
+}
+.more__genre-card p{
+    font-size: var(--text-md);
+    margin-bottom: 0px;
+}
+.more__genre-headline{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 18px;
+    align-items: center;
+    margin-right: -30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.more__genre-headline b{
+    font-size: var(--text-mid);
+    line-height: 1.5;
+}
+.more__genre-dp{
+    display: flex;
+    gap: 12px;
+}
+.more__genre-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.more__genre-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 
 
