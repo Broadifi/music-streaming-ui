@@ -1539,13 +1539,13 @@ section{
 .about--banner__image{
     align-self: end;
     position: relative;
+    padding-top: 290px;
 }
 .about--banner__inner{
-    /* height: auto; */
-    padding: 150px 0px 0px;
+    height: auto;
 }
 .about--banner__inner .banner__text{
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 .about--banner__image .banner-focus__img{
     min-width: 450px;
@@ -1578,6 +1578,92 @@ section{
     bottom: 0;
 }
 
+.about__focus{
+    background: radial-gradient(120.19% 65.75% at -11.21% 2.58%, var(--color-bg-darkgreen) 7.12%, #1f2a2f 66.23%);
+    /* padding: 80px 0px; */
+    position: relative;
+}
+.about__grid{
+    display: grid;
+    grid-template-columns: 45% 1fr;
+}
+.about__img-grid{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 45%;
+}
+.about__img-grid:after{
+    content: "";
+    background: linear-gradient(to left, transparent 30%, #1f2a2f 80%);
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    bottom: -125px;
+    left: -100px;
+    z-index: 0;
+    box-shadow: inset 250px 0px 270px #1f2a2f;
+    border-radius: 40% 0 0 40%;
+}
+.about-img__wrapper{
+    width: 100%;
+    height: 100%;
+    border-radius: 40% 0 0 40%;
+    overflow: hidden;
+}
+.about__img-grid img{
+    width: 100%;
+    height: 100%;
+}
+.about__content-grid{
+    width: 40%;
+    padding: 65px 40px 40px 0px;
+}
+.about__content{
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    color: rgba(255,255,255,.75);
+    margin: 25px 0px 15px;
+}
+.assets__grid{
+    display: flex;
+    gap: 30px;
+    margin: 40px 0px;
+}
+.assets{
+    width: 140px;
+    height: 100px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #36535a, #1d252a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-sm);
+    color: var(--color-white);
+}
+.assets b{
+    display: block;
+    margin-bottom: 5px;
+    font-size: var(--text-xl);
+    font-weight: 500;
+}
+.assets p{
+    margin: 0px;
+}
+.rising__track-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.rising__track-card{
+    background: #1c1d31;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
 
 
 
@@ -1593,10 +1679,10 @@ section{
 
 
 @media (min-width: 1800px){
-    section:not(.banner){
+    /* section:not(.banner){
         min-height: 85vh;
         padding: 150px 0px;
-    }
+    } */
     .banner-focus__img {
         min-width: 590px;
     }
