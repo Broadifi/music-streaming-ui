@@ -1790,15 +1790,145 @@ section{
 
 
 /*-----------------------------Login page----------------------------------*/
-.login__page{
+.login__page-wrapper{
+    position: fixed;
     min-height: 100vh;
-    
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(236, 243, 219, .10) 7.12%, rgba(19, 21, 24, 1) 42.28%, 
+    rgba(23, 23, 23, 1) 100%), linear-gradient(189.22deg, var(--color-dark-olive) -17.47%, var(--color-black) 66.23%);
+}
+.login__page{
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login__animation{
+    margin-bottom: 30px;
+}
+.login__animation video{
+    width: 100%;
+    height: 100%;
+}
+.login__page h3{
+    font-size: var(--text-mid);
+    color: rgba(255,255,255,.75);
+}
+.login__headline{
+    font-size: var(--text-sm1);
+    color: rgba(255,255,255,.68);
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.login__form label{
+    font-size: var(--text-md);
+    color: rgba(255,255,255,.7);
+    margin-bottom: 10px;
+}
+.login__input{
+    height: 50px;
+    border-radius: 30px;
+    background: rgba(247, 247, 247, .13);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.login__input .form__control{
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0px 12px 0px 50px;
+    font-size: var(--text-sm1);
+    color: rgba(255,255,255,.82);
+}
+.login__input span{
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+.login__input span svg{
+    max-width: 20px;
+    max-height: 22px;
+}
+.login__input span svg path{
+    stroke: rgba(255,255,255,.5);
+}
+.signup__text{
+    font-size: var(--text-sm1);
+    color: rgba(255,255,255,.7);
+    margin: 25px 0px 0px;
+    text-align: center;
+}
+.signup__text a{
+    color: var(--color-theme-lightgreen);
+}
+.signup__text a:hover{
+    text-decoration: underline;
+}
+.close-page{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
+}
+.close-page svg{
+    max-width: 45px;
+    max-height: 50px;
+}
+.close-page svg path{
+    stroke: var(--color-theme-lightgreen);
+    transition: all .3s;
+}
+.close-page svg:hover path{
+    stroke: var(--color-white);
 }
 
 
-
-
-
+/*--------------------------Pricing page----------------------------*/
+.pricing__page{
+    padding: 140px 0px 50px;
+    text-align: center;
+    height: 100VH;
+}
+.pricing__grid{
+    width: 100%;
+    max-width: 1000PX;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.pricing__card{
+    padding: 50px 30PX 30PX;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    color: var(--color-theme-lightgreen) !important;
+}
+.pricing__card h4{
+    font-size: var(--text-mid);
+    font-weight: 700;
+    margin: 0px 0px 20px;
+}
+.pricing__card p{
+    font-size: var(--text-xl);
+    line-height: 2;
+    margin: 0PX;
+}
+.pricing__card p b{
+    color: var(--color-themegreen) !important;
+}
 
 
 
@@ -1838,10 +1968,10 @@ section{
 
 
 @media (min-width: 2200px){
-    section:not(.banner){
+    /* section:not(.banner){
         min-height: 65vh;
         padding: 80px 0px;
-    }
+    } */
     
     .banner-focus__img {
         min-width: 720px;
