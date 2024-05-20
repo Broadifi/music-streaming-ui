@@ -33,6 +33,7 @@
       href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -52,7 +53,7 @@
           <nav class="menu-container__list">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="about.html">About</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="#!">Music</a></li>
               <li class="active"><a href="pricing.html">Pricing</a></li>
             </ul>
@@ -65,6 +66,10 @@
     <!-- <div class="viewport"> -->
       <!-- <div class="scroll-container"> -->
         <section class="banner pricing__page">
+          <div class="pricing__page-ellipse">
+            <img src="images/ellipse-left.png" alt="glowing ellipse">
+            <img src="images/ellipse-right.png" alt="glowing ellipse">
+          </div>
             <div class="container">
               <div class="overflow-hidden">
                 <h3 class="section-heading__main" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="20">Join the Music Revolution</h3>
@@ -72,22 +77,28 @@
               <div class="overflow-hidden">
                 <p class="section-heading__text" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="20">Flexible Pricing for All Listeners. Pick Yours Today.</p>
               </div>
-              <div class="pricing__grid">
-                <a href="#!" class="pricing__card">
+              <div class="pricing__grid" data-aos="fade-zoom-in" data-aos-duration="600">
+                <div class="pricing__card-ellipse">
+                  <img src="images/ellipse-glow.png" alt="glowing ellipse" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="300">
+                </div>
+                <div class="pricing__card-ellipse">
+                  <img src="images/ellipse-glow.png" alt="glowing ellipse" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="300">
+                </div>
+                <a href="#!" class="pricing__card" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="600">
                   <h4>Premium Individual</h4>
                   <p>Listen without limits.<br>
                     Try 2 months of Premium for <b>₹110</b>.<br>
                     Only <b>₹110/month</b> after. <br>
                     Cancel anytime.</p>
                 </a>
-                <a href="#!" class="pricing__card">
+                <a href="#!" class="pricing__card" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="600">
                   <h4>Premium Couple</h4>
                   <p>Music for two.<br>
                     Two Premium accounts for couples.<br>
                     <b>₹149/month</b>.<br>
                     Cancel anytime.</p>
                 </a>
-                <a href="#!" class="pricing__card">
+                <a href="#!" class="pricing__card" data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="600">
                   <h4>Premium Group</h4>
                   <p>Family/Group members living under one roof can enjoy up to 6 Premium accounts.<br>
                     2 months for <b>₹199</b>, <br>
