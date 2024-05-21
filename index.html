@@ -33,6 +33,8 @@
       href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -51,27 +53,27 @@
           </div>
           <nav class="menu-container__list">
             <ul>
-              <li><a href="#!">Home</a></li>
-              <li><a href="#!">About</a></li>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="#!">Music</a></li>
-              <li><a href="#!">Pricing</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
             </ul>
-            <a href="#!" class="btn-theme mobile-only">Log in</a>
+            <a href="login.html" class="btn-theme mobile-only">Log in</a>
           </nav>
-          <a href="#!" class="btn-theme">Log in</a>
+          <a href="login.html" class="btn-theme">Log in</a>
           
         </div>
       </div>
     </header>
-    <div class="viewport">
-      <div class="scroll-container">
+    <!-- <div class="viewport"> -->
+      <!-- <div class="scroll-container"> -->
         <section class="banner appear-down">
           <div class="container">
             <div class="banner__inner">
               <div class="banner__text">
                 <div class="overflow-hidden">
                   <h1 data-aos="fade-up" data-aos-delay="10">
-                    <span>Unleash the Symphony</span>&nbsp;of Your Soul
+                    <span>Unleash the Symphony</span> of Your Soul
                   </h1>
                 </div>
                 <div class="overflow-hidden">
@@ -82,12 +84,37 @@
                   <a href="#!" class="btn-theme" data-aos="flip-down" data-aos-delay="30">Start for free</a>
               </div>
               <div class="banner__image">
-                <img
-                  src="images/female-with-headphone1.png"
-                  width="800"
-                  height="800"
-                  alt="user listening music" data-aos="fade-in" data-aos-delay="40"
-                />
+                <div class="banner-orbit__wrapper">
+                  <div class="banner-orbit__rotator circle1" data-aos="fade-zoom-in" data-aos-duration="200" data-aos-delay="200">
+                    <div class="banner-orbit__crowd sub-circle1">
+
+                      <div class="banner-orbit__icon top circle1">
+                        <div class="banner-orbit__icon-spinner spinner">
+                          <div class="banner-orbit__icon-dp artist-circle__card-item">
+                            <span class="spinned-icon" style="width: 100%;display: inline-block;">
+                              <img src="images/play-vector.png" alt="play vector">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="banner-orbit__icon bottom circle1">
+                        <div class="banner-orbit__icon-spinner spinner">
+                          <div class="banner-orbit__icon-dp artist-circle__card-item">
+                            <span class="spinned-icon" style="width: 100%;display: inline-block;">
+                              <img src="images/music-note-vector.png" alt="music note vector">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="banner-focus">
+                    <img src="images/music-spectrum-stroke.png" alt="music spectrum" class="banner-focus__img" data-aos="fade-zoom-in" data-aos-delay="100">
+                    <div class="hero-mike__img">
+                      <img src="images/mike-antic.png" alt="antic mike" data-aos="zoom-in-up" data-aos-delay="130">
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="banner__object">
                 <img
@@ -106,7 +133,7 @@
             </div>
           </div>
         </section>
-        <section class="music-ocean appear-down" data-aos="zoom-in-up" data-aos-duration="700">
+        <section class="music-ocean appear-down">
           <div class="container">
             <div class="section-heading">
               <div class="overflow-hidden">
@@ -277,7 +304,7 @@
             </div>
           </div>
         </section>
-        <section class="latest-track appear-down" data-aos="zoom-in-up" data-aos-duration="700">
+        <section class="latest-track appear-down">
           <div class="container">
             <div class="section-heading">
               <div class="overflow-hidden">
@@ -452,7 +479,7 @@
             <a href="#!" class="btn-theme" data-aos="flip-down" data-aos-duration="700" data-aos-delay="20">More tracks</a>
           </div>
         </section>
-        <section class="artist-view__forum appear-down" data-aos="zoom-in-up" data-aos-duration="700">
+        <section class="artist-view__forum appear-down">
           <div class="container">
             <div class="section-heading">
               <div class="overflow-hidden">
@@ -622,7 +649,7 @@
             </div>
           </div>
         </section>
-        <section class="do-with__music appear-down" data-aos="zoom-in-up" data-aos-duration="700">
+        <section class="do-with__music appear-down">
           <div class="container">
             <div class="section-heading">
               <div class="overflow-hidden">
@@ -652,7 +679,7 @@
             </div>
           </div>
         </section>
-        <section class="pre-footer appear-down" data-aos="zoom-in-up" data-aos-duration="700">
+        <section class="pre-footer appear-down">
           <div class="container">
             <div class="section-heading">
               <div class="overflow-hidden">
@@ -700,7 +727,7 @@
           </div>
           <div class="pre-footer__overlay"></div>
         </section>
-        <footer class="footer-main appear-down" data-aos="zoom-in-up" data-aos-duration="700">
+        <footer class="footer-main appear-down">
           <div class="footer-top">
             <div class="container">
               <div class="footer-top__grid">
@@ -795,29 +822,30 @@
             </div>
           </div>
         </footer>
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
 
     
-    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/gsap.min.js"></script>
+    <!-- <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.min.js"></script> -->
     <script src="js/splide.min.js"></script>
     <script src="js/splide-extension-auto-scroll.min.js"></script>
     <script src="js/aos.js"></script>
   
     <!-- <script src="js/gsap-latest-beta.min.js"></script> -->
     <!-- <script src="js/locomotive-scroll.min.js"></script> -->
+    <script src="js/lenis.min.js"></script>
 
     <script src="js/custom.js"></script>
-      <script>
-        AOS.init({
-        duration: 900,
-        easing: 'ease-out-cubic',
-        once: true,
+    <script>
+      AOS.init({
+          duration: 900,
+          easing: 'ease-out-cubic',
+          once: true,
       });
-      </script>
+    </script>
 
   </body>
 </html>
