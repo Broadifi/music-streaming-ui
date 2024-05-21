@@ -1867,7 +1867,7 @@ section{
 .login__input span{
     position: absolute;
     left: 15px;
-    top: 13px;
+    top: 11px;
 }
 .login__input span svg{
     max-width: 20px;
