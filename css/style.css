@@ -1957,6 +1957,7 @@ section{
     z-index: 1;
     transition-property: opacity, transform, box-shadow !important;
     box-shadow: 0px 0px 40px transparent;
+    text-align: left;
 }
 .pricing__card:hover{
     box-shadow: 0px 0px 40px rgba(98,147,140,.5);
@@ -1982,27 +1983,42 @@ section{
 }
 
 .pricing__card h4{
-    font-size: var(--text-3xl);
-    font-weight: 700;
-    margin: 0px 0px 35px;
+    font-size: var(--text-lg);
+    font-weight: 500;
+    margin: 0px 0px 5px;
     color: var(--color-themegreen);
     position: relative;
 }
-.pricing__card h4::after{
+.pricing__card h3{
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-theme-lightgreen);
+    position: relative;
+    margin: 0px 0px 15px;
+}
+.pricing__card p::after{
     content: "";
-    height: 2px;
-    width: 50px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
     background: var(--color-white);
     background: linear-gradient(to right, var(--color-theme-lime), var(--color-themegreen) 88%);
     position: absolute;
-    bottom: -9px;
-    left: 50%;
-    margin-left: -25px;
+    top: 10px;
+    left: 0;    
+}
+.pricing__card .btn-theme{
+    width: 100%;
 }
 .pricing__card p{
     font-size: var(--text-lg);
-    line-height: 2;
-    margin: 0PX;
+    line-height: 1.5;
+    margin: 10px 0px;
+    position: relative;
+    padding-left: 16px;
+}
+.pricing__card p:first-child{
+    margin: 30px 0px 10px;
 }
 .pricing__card p b{
     color: var(--color-themegreen) !important;
