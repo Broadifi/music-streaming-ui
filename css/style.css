@@ -1802,8 +1802,6 @@ section{
     min-height: 100vh;
     inset: 0;
     z-index: 5;
-    /* background: radial-gradient(120.19% 65.75% at -30.21% 2.58%, rgba(236, 243, 219, .10) 7.12%, rgba(19, 21, 24, 1) 42.28%, 
-    rgba(23, 23, 23, 1) 100%), linear-gradient(189.22deg, var(--color-dark-olive) -17.47%, var(--color-black) 66.23%); */
     padding: 100px 0px 60px;
     overflow-y: auto;
 }
@@ -1815,6 +1813,8 @@ section{
     max-width: 500px;
     margin: 0 auto;
     position: relative;
+    background: rgba(255,255,255,.09);
+    background: linear-gradient(45deg, rgba(255, 255, 255, .18), transparent);
 }
 
 .music__bar{
@@ -1823,7 +1823,7 @@ section{
 }
 .music__bar img{
     max-width: 100%;
-    max-height: 160px;
+    max-height: 200px;
 }
 
 .login__page h3{
@@ -1844,7 +1844,7 @@ section{
 .login__input{
     height: 50px;
     border-radius: 30px;
-    background: rgba(247, 247, 247, .13);
+    background: rgba(247, 247, 247, .19);
     position: relative;
     overflow: hidden;
     margin-bottom: 15px;
@@ -1861,6 +1861,9 @@ section{
     font-size: var(--text-sm1);
     color: rgba(255,255,255,.82);
 }
+.login__input .form__control::placeholder{
+    color: rgba(255,255,255,.3);
+}
 .login__input span{
     position: absolute;
     left: 15px;
@@ -1872,6 +1875,7 @@ section{
 }
 .login__input span svg path{
     stroke: rgba(255,255,255,.5);
+    transition: all .3s;
 }
 .signup__text{
     font-size: var(--text-sm1);
@@ -1901,6 +1905,9 @@ section{
     transition: all .3s;
 }
 .close-page svg:hover path{
+    stroke: var(--color-white);
+}
+.login__input:has(.form__control:focus) span svg path{
     stroke: var(--color-white);
 }
 
