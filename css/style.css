@@ -390,7 +390,7 @@ body{
         display: flex;
     }
 }
-@media screen and (prefers-reduced-motion) {
+@media screen and (prefers-reduced-motion: reduce) {
     .banner-orbit__rotator{
         display: none;
     }
@@ -1263,7 +1263,7 @@ section{
         display: flex;
     }
 }
-@media screen and (prefers-reduced-motion) {
+@media screen and (prefers-reduced-motion: reduce) {
     .artist-circle__rotator{
         display: none;
     }
