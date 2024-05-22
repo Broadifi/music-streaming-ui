@@ -385,12 +385,12 @@ body{
     box-shadow: inset 230px 0px 75px rgb(210 246 203 / 20%);
 }
 
-@media screen and (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
     .banner-orbit__rotator{
         display: flex;
     }
 }
-@media screen and (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     .banner-orbit__rotator{
         display: none;
     }
@@ -1258,12 +1258,12 @@ section{
     transform: rotate(-60deg);
 }
 
-@media screen and (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
     .artist-circle__rotator{
         display: flex;
     }
 }
-@media screen and (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     .artist-circle__rotator{
         display: none;
     }
