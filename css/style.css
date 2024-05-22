@@ -1992,6 +1992,9 @@ section{
     .banner-focus__img {
         min-width: 820px;
     }
+    .artist-circle{
+        transform: translate(-50%, 15%);
+    }
 }
 
 @media (min-width: 4000px){
@@ -2701,7 +2704,7 @@ section{
         height: 100px;
     }
     .artist-circle {
-        transform: translate(-50%, 21%);
+        transform: translate(-50%, 19%);
     }
     .content-p{
         font-size: var(--text-sm);
@@ -2764,15 +2767,20 @@ section{
 
 }
 
-@media (max-width:340px){
+@media (max-width: 412px){
     .artist-circle {
-        transform: translate(-50%, 21%);
+        transform: translate(-50%, 20%);
     }
-    .content-p{
-        max-width: 270px;
-    }
+}
+@media (max-width: 324px){
     .artist-circle {
         transform: translate(-50%, 23%);
+    }
+}
+
+@media (max-width:340px){
+    .content-p{
+        max-width: 270px;
     }
 
 }
