@@ -1673,7 +1673,7 @@ section{
     min-height: 100vh;
     inset: 0;
     z-index: 5;
-    padding: 100px 0px 60px;
+    padding: 40px 0px;
     overflow-y: auto;
 }
 .login__page{
@@ -2646,7 +2646,12 @@ section{
         max-height: 18px;
     }
     .login__input span{
-        top: 11px;
+        top: 9px;
+    }
+
+    .close-page svg {
+        max-width: 22px;
+        max-height: 22px;
     }
     
     
