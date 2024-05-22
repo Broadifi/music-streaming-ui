@@ -48,29 +48,10 @@
     --color-aqua: #0F7775;
 }
 
-/* html.lenis, html.lenis body {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  } */
-
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 html{
     scroll-behavior: smooth;
@@ -236,8 +217,6 @@ body{
 .banner{
     position: relative;
     background: linear-gradient(to right, var(--color-bg-darkgreen) 40%, var(--color-seagreen) 190%);
-    /* background: linear-gradient(to top right, var(--color-bg-darkgreen) 32.44%, var(--color-aqua) 75.22%, 
-    var(--color-seagreen) 116.33%); */
     overflow-x: hidden;
 }
 .banner__inner{
@@ -385,7 +364,6 @@ h1 span{
 }
 
 .banner__text {
-    /* max-width: 500px; */
     padding-top: 40px;
     color: rgba(255,255,255,.82);
     position: relative;
@@ -663,7 +641,6 @@ h1 span{
 }
 .music-type__tab-menu .nav-item{
     position: relative;
-    /* width: max-content; */
     width: 100%;
     z-index: 0;
 }
@@ -767,9 +744,6 @@ h1 span{
         object-position: center;
         transition: transform .5s ease-in-out;
     }
-    /* .music-boost__card:hover a img{
-        transform: scale(1.1);
-    } */
     .music-boost__card a:after{
         content: "";
         height: 100%;
@@ -891,7 +865,6 @@ h1 span{
         left: -3px;
         right: -3px;
         background: linear-gradient(var(--gradient-angle), var(--color-greenish-grey), rgba(106, 145, 153, .51));
-        /* animation: rotation 3s linear 0s infinite normal forwards; */
         border-radius: 6px;
         z-index: 0;
     }
@@ -1381,7 +1354,6 @@ section{
 .footer-text{
     font-size: var(--text-sm);
     color: rgba(255,255,255,.75);
-    /* font-weight: 300; */
     line-height: 1.8;
 }
 .footer-heading{
@@ -1479,7 +1451,6 @@ section{
 
 .about__focus{
     background: radial-gradient(120.19% 65.75% at -11.21% 2.58%, var(--color-bg-darkgreen) 7.12%, #1f2a2f 66.23%);
-    /* padding: 80px 0px; */
     position: relative;
 }
 .about__grid{
@@ -2650,9 +2621,6 @@ section{
     .latest-track__slider--model__card{
         width: 380px !important;
     }
-    /* .latest-track__slider--model__card a{
-        width: 100%;
-    } */
     .latest-track__slider{
         margin: 30px 0px;
     }
