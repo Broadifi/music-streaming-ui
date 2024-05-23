@@ -6,7 +6,7 @@ This project is a fully functional landing page for a music streaming website, d
 
 ## Authors
 
-- https://github.com/Broadifi/music-streaming-ui
+- [Debleena Chakraborty](https://github.com/debleena-c)
 
 
 ## Key Features and Technologies
