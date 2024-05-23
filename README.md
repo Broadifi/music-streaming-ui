@@ -7,6 +7,7 @@ This project is a fully functional landing page for a music streaming website, d
 ## Authors
 
 - [Debleena Chakraborty](https://github.com/debleena-c)
+- [Broadifi](https://github.com/Broadifi)
 
 
 ## Key Features and Technologies
